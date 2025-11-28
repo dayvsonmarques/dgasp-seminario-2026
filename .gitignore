@@ -1,0 +1,41 @@
+# WordPress core files (do not ignore)
+# Ignore sensitive and environment-specific files
+wp-config.php
+
+# Ignore uploads and cache
+wp-content/uploads/
+wp-content/cache/
+
+# Ignore language files (optional, if not versioning)
+wp-content/languages/
+
+# Ignore plugins and themes (optional, if not custom)
+wp-content/plugins/*
+!wp-content/plugins/index.php
+wp-content/themes/*
+!wp-content/themes/index.php
+
+# Ignore OS and editor files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Ignore backup and export files
+*.bak
+*.sql
+*.tar
+*.zip
+*.gz
+
+# Ignore node and composer dependencies
+node_modules/
+vendor/
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore IDE files
+.vscode/
+.idea/
