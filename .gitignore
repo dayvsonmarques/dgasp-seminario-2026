@@ -1,4 +1,22 @@
-# WordPress core files (do not ignore)
+# Ignorar arquivos do WordPress core
+wp-admin/
+wp-includes/
+index.php
+xmlrpc.php
+readme.html
+license.txt
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
 # Ignore sensitive and environment-specific files
 wp-config.php
 
@@ -13,6 +31,8 @@ wp-content/languages/
 wp-content/plugins/*
 !wp-content/plugins/index.php
 wp-content/themes/*
+!wp-content/themes/congresso-custom/
+!wp-content/themes/congresso-custom/**
 !wp-content/themes/index.php
 
 # Ignore OS and editor files
