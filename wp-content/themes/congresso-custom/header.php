@@ -6,27 +6,24 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header class="site-header">
-    <?php require_once get_template_directory() . '/inc/class-bootstrap-navwalker.php'; ?>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">III Seminário Saúde Prisional PE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <?php
-                wp_nav_menu([
-                    'theme_location' => 'primary',
-                    'container' => false,
-                    'menu_class' => 'navbar-nav ms-auto',
-                    'fallback_cb' => '__return_false',
-                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    'depth' => 2,
-                    'walker' => new Bootstrap_NavWalker(),
-                ]);
-                ?>
+
+<header class="site-header" style="background:#fff;border-bottom:6px solid #5497e8;">
+    <div class="container-fluid px-0">
+        <div class="row align-items-center g-0" style="min-height:90px;">
+            <div class="col-lg-4 d-flex align-items-center gap-3 ps-4">
+                <img src="/wp-content/themes/congresso-custom/assets/img/logo-seminario.png" alt="Logo Seminário" style="height:60px;">
+                <img src="/wp-content/themes/congresso-custom/assets/img/logo-pe.png" alt="Logo Governo PE" style="height:48px;">
+            </div>
+            <div class="col-lg-8">
+                <nav class="main-menu d-flex justify-content-end gap-2 pe-4" style="font-size:1.1rem;">
+                    <a href="#" class="menu-btn" style="background:#0068ff;color:#fff;padding:0.6rem 1.4rem;border-radius:4px;font-weight:600;text-decoration:none;">INÍCIO</a>
+                    <a href="#" class="menu-btn" style="background:#0068ff;color:#fff;padding:0.6rem 1.4rem;border-radius:4px;font-weight:600;text-decoration:none;">SOBRE</a>
+                    <a href="#" class="menu-btn" style="background:#0068ff;color:#fff;padding:0.6rem 1.4rem;border-radius:4px;font-weight:600;text-decoration:none;">COMISSÕES</a>
+                    <a href="#" class="menu-btn" style="background:#0068ff;color:#fff;padding:0.6rem 1.4rem;border-radius:4px;font-weight:600;text-decoration:none;">EDITAL</a>
+                    <a href="#" class="menu-btn" style="background:#0068ff;color:#fff;padding:0.6rem 1.4rem;border-radius:4px;font-weight:600;text-decoration:none;">CONTATO</a>
+                    <a href="#" class="menu-btn" style="background:#0068ff;color:#fff;padding:0.6rem 1.4rem;border-radius:4px;font-weight:600;text-decoration:none;">LOGIN</a>
+                </nav>
             </div>
         </div>
-    </nav>
+    </div>
 </header>
