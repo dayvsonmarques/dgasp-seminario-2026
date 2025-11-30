@@ -2,8 +2,24 @@
 get_header(); ?>
 
 <main class="home">
-    <section class="banner-home">
+    <section class="banner-home position-relative overflow-hidden">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/banner.jpg" alt="Banner Hero Seminário" class="img-fluid banner-img">
+        <div class="banner__container position-absolute top-0 start-0 w-100 h-100 d-flex">
+            <div class="banner__col banner__col--image"></div>
+            <div class="banner__col banner__col--text d-flex flex-column justify-content-center align-items-start">
+                <h1 class="banner__title">
+                    III SEMINÁRIO ESTADUAL<br>
+                    DE ATENÇÃO À SAÚDE<br>
+                    PRISIONAL DE PERNAMBUCO
+                </h1>
+                <p class="banner__subtitle">
+                    10 ANOS DA PNAISP EM PERNAMBUCO:<br>MEMÓRIA, CUIDADO E COMPROMISSO
+                </p>
+                <span class="banner__date">
+                    27, 28 E 29 DE JANEIRO DE 2026
+                </span>
+            </div>
+        </div>
     </section>
     <section class="sobre-evento py-5 bg-blue">
         <div class="container">

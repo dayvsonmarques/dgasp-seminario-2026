@@ -1,3 +1,42 @@
+/* Banner Overlay Columns */
+.banner-overlay {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+.banner__col {
+	flex-basis: 50%;
+	max-width: 50%;
+	height: 100%;
+}
+.banner__col--text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100%;
+	padding-left: 3vw;
+	padding-right: 3vw;
+}
+.banner__title {
+	color: #fff;
+	font-size: 2.8rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+.banner__subtitle {
+	color: #fff;
+	font-size: 1.3rem;
+	margin-bottom: 0.7rem;
+}
+.banner__date {
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
 /*
 Theme Name: Congresso Custom
 Theme URI: https://example.com/
@@ -116,9 +155,11 @@ body {
 	background: var(--branco);
 	color: var(--azul-escuro);
 	box-shadow: 0 2px 16px rgba(34,50,84,0.08);
+/* Banner Texts - Always White */
+.banner-title, .banner-subtitle, .banner-date {
+	color: #fff !important;
+	/* ...outros estilos... */
 }
-.presentation h2 {
-	color: var(--azul-principal);
 	font-weight: 600;
 }
 .logos {
