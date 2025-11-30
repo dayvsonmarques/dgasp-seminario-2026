@@ -8,21 +8,18 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
 	display: flex;
 	flex-direction: row;
 }
 .banner__col {
 	flex-basis: 50%;
 	max-width: 50%;
-	height: 100%;
 }
 .banner__col--text {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	height: 100%;
 	padding-left: 3vw;
 	padding-right: 3vw;
 }
@@ -79,7 +76,19 @@ Text Domain: congresso-custom
 }
 .banner-img {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.banner-home {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
 }
 .bg-blue {
 	background: var(--azul-principal) !important;
