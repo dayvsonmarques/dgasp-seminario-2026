@@ -13,10 +13,10 @@ get_header(); ?>
                     PRISIONAL DE PERNAMBUCO
                 </h1>
                 <p class="banner__subtitle">
-                    10 ANOS DA PNAISP EM PERNAMBUCO:<br>MEMÓRIA, CUIDADO E COMPROMISSO
+                    <strong>10 ANOS</strong> DA <strong>PNAISP</strong> EM PERNAMBUCO:<br>MEMÓRIA, CUIDADO E COMPROMISSO
                 </p>
                 <span class="banner__date">
-                    27, 28 E 29 DE JANEIRO DE 2026
+                    <span class="bold">27</span>, <span class="bold">28</span> E <span class="bold">29</span> DE <span class="bold">JANEIRO</span> DE 2026
                 </span>
             </div>
         </div>

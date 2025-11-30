@@ -1,3 +1,6 @@
+.bold {
+	font-weight: bold;
+}
 /* Banner Overlay Columns */
 
 .banner__container {
@@ -25,19 +28,31 @@
 }
 .banner__title {
 	color: #fff;
-	font-size: 2.8rem;
-	font-weight: 700;
+	font-size: 4em;
+	font-weight: bold;
 	margin-bottom: 1rem;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 30px;
 }
 .banner__subtitle {
 	color: #fff;
-	font-size: 1.3rem;
-	margin-bottom: 0.7rem;
+	font-size: 2.2em;
+	background: var(--azul-escuro);
+	padding: 20px;
+	margin-bottom: 1.2em;
+	border-radius: 6px;
 }
 .banner__date {
 	color: #fff;
-	font-size: 1.1rem;
-	font-weight: 600;
+	font-size: 2em;
+	font-weight: 400;
+	margin-bottom: 1em;
+	background: var(--azul-principal);
+	padding: 20px;
+	border-radius: 6px;
+	display: inline-block;
 }
 /*
 Theme Name: Congresso Custom
