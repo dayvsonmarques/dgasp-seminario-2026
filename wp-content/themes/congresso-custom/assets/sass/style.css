@@ -1,3 +1,19 @@
+.header-logo {
+  max-height: 90px;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.header-logo--main {
+  max-height: 65px;
+}
+
+.header-logo--gov {
+  max-height: 70px;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -5,8 +21,7 @@
 .banner-home {
   position: relative;
   width: 100%;
-  min-height: 350px;
-  max-height: 700px;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -73,4 +88,114 @@
   padding: 20px;
   border-radius: 6px;
   display: inline-block;
+}
+
+.bg-blue {
+  background: #0068ff !important;
+}
+
+.bg-dark-blue {
+  background: #223254 !important;
+}
+
+.bg-white {
+  background: #ffffff !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-blue {
+  color: #0068ff !important;
+}
+
+.text-dark-blue {
+  color: #223254 !important;
+}
+
+.evento-card {
+  background: #ffffff;
+  color: #223254;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0068ff;
+}
+
+.btn-saiba, .btn-cadastro {
+  background: #0068ff !important;
+  color: #ffffff !important;
+}
+
+body {
+  background: #ffffff;
+  color: #223254;
+  font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.site-header, .navbar {
+  background: #ffffff !important;
+  color: #223254;
+}
+
+.navbar .navbar-brand {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: #5497e8 !important;
+}
+
+.banner {
+  background: linear-gradient(90deg, #223254 60%, #5497e8 100%);
+  color: #ffffff;
+}
+
+.banner h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.banner p {
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.presentation {
+  background: #ffffff;
+  color: #223254;
+  box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
+}
+
+.banner-title, .banner-subtitle, .banner-date {
+  color: #ffffff !important;
+}
+
+.logos {
+  background: #5497e8;
+  border-radius: 16px;
+}
+
+.logos img {
+  filter: grayscale(0) brightness(1.1);
+  max-height: 80px;
+}
+
+.site-footer {
+  background: #223254 !important;
+  color: #ffffff;
+  border-top: 4px solid #0068ff;
+}
+
+.site-footer a {
+  color: #5497e8;
 }/*# sourceMappingURL=style.css.map */

@@ -3,7 +3,7 @@ get_header(); ?>
 
 <main class="home">
     <section class="banner-home position-relative overflow-hidden">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepage/banner.jpg" alt="Banner Hero Seminário" class="img-fluid banner-img">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner.jpg" alt="Banner Hero Seminário" class="img-fluid banner-img">
         <div class="banner__container position-absolute top-0 start-0 w-100 h-100 d-flex">
             <div class="banner__col banner__col--image"></div>
             <div class="banner__col banner__col--text d-flex flex-column justify-content-center align-items-start">

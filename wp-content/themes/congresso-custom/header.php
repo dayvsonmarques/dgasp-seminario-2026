@@ -11,8 +11,8 @@
     <div class="container-fluid px-0">
         <div class="row align-items-center g-0" style="min-height:90px;">
             <div class="col-lg-4 d-flex align-items-center gap-3 ps-4">
-                <img src="/wp-content/themes/congresso-custom/assets/img/logo-seminario.png" alt="Logo Seminário" style="height:60px;">
-                <img src="/wp-content/themes/congresso-custom/assets/img/logo-pe.png" alt="Logo Governo PE" style="height:48px;">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-header.png" alt="Logo Seminário" class="header-logo header-logo--main">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-gov.br.png" alt="Logo Governo PE" class="header-logo header-logo--gov">
             </div>
             <div class="col-lg-8">
                 <nav class="main-menu d-flex justify-content-end gap-2 pe-4" style="font-size:1.1rem;">

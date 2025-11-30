@@ -140,7 +140,6 @@ Text Domain: congresso-custom
 	font-size: 1.1rem;
 	padding: 0.7rem 2.2rem;
 }
-}
 
 body {
 	background: var(--branco);
@@ -149,8 +148,8 @@ body {
 }
 
 .site-header, .navbar {
-	background: var(--azul-escuro) !important;
-	color: var(--branco);
+	background: var(--branco) !important;
+	color: var(--azul-escuro);
 }
 .navbar .navbar-brand {
 	color: var(--branco) !important;

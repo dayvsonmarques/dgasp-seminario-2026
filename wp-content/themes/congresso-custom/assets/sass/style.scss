@@ -1,10 +1,18 @@
-// style.scss for Congresso Custom Theme
-// Move all your CSS here and use Sass features
-
-$azul-escuro: #223254;
-$azul-principal: #0068ff;
-$azul-claro: #5497e8;
-$branco: #ffffff;
+// Header logo images
+.header-logo {
+  max-height: 90px;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+}
+.header-logo--main {
+  max-height: 65px;
+}
+.header-logo--gov {
+  max-height: 70px;
+}
+@import 'colors';
 
 .bold {
   font-weight: bold;
@@ -13,8 +21,7 @@ $branco: #ffffff;
 .banner-home {
   position: relative;
   width: 100%;
-  min-height: 350px;
-  max-height: 700px;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -53,7 +60,7 @@ $branco: #ffffff;
 }
 
 .banner__title {
-  color: $branco;
+  color: $color-white;
   font-size: 4em;
   font-weight: bold;
   margin-bottom: 30px;
@@ -63,23 +70,109 @@ $branco: #ffffff;
 }
 
 .banner__subtitle {
-  color: $branco;
+  color: $color-white;
   font-size: 2.2em;
-  background: $azul-escuro;
+  background: $color-dark-blue;
   padding: 20px;
   margin-bottom: 1.2em;
   border-radius: 6px;
 }
 
 .banner__date {
-  color: $branco;
+  color: $color-white;
   font-size: 2em;
   font-weight: 400;
   margin-bottom: 1em;
-  background: $azul-principal;
+  background: $color-blue;
   padding: 20px;
   border-radius: 6px;
   display: inline-block;
 }
 
-// Add the rest of your CSS here, using Sass features as needed
+.bg-blue {
+  background: $color-blue !important;
+}
+.bg-dark-blue {
+  background: $color-dark-blue !important;
+}
+.bg-white {
+  background: $color-white !important;
+}
+.text-white {
+  color: $color-white !important;
+}
+.text-blue {
+  color: $color-blue !important;
+}
+.text-dark-blue {
+  color: $color-dark-blue !important;
+}
+.evento-card {
+  background: $color-white;
+  color: $color-dark-blue;
+}
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $color-blue;
+}
+.btn-saiba, .btn-cadastro {
+  background: $color-blue !important;
+  color: $color-white !important;
+}
+body {
+  background: $color-white;
+  color: $color-dark-blue;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+.site-header, .navbar {
+  background: $color-white !important;
+  color: $color-dark-blue;
+}
+.navbar .navbar-brand {
+  color: $color-white !important;
+  font-weight: bold;
+}
+.navbar-nav .nav-link {
+  color: $color-white !important;
+}
+.navbar-nav .nav-link.active {
+  color: $color-light-blue !important;
+}
+.banner {
+  background: linear-gradient(90deg, $color-dark-blue 60%, $color-light-blue 100%);
+  color: $color-white;
+}
+.banner h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: $color-white;
+}
+.banner p {
+  font-size: 1.3rem;
+  color: $color-white;
+}
+.presentation {
+  background: $color-white;
+  color: $color-dark-blue;
+  box-shadow: 0 2px 16px rgba(34,50,84,0.08);
+}
+.banner-title, .banner-subtitle, .banner-date {
+  color: $color-white !important;
+}
+.logos {
+  background: $color-light-blue;
+  border-radius: 16px;
+}
+.logos img {
+  filter: grayscale(0) brightness(1.1);
+  max-height: 80px;
+}
+.site-footer {
+  background: $color-dark-blue !important;
+  color: $color-white;
+  border-top: 4px solid $color-blue;
+}
+.site-footer a {
+  color: $color-light-blue;
+}
