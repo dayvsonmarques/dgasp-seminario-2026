@@ -1,3 +1,39 @@
+.header-bar {
+  width: 100%;
+  height: 8px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.header-bar--top {
+  margin-bottom: 0;
+}
+.header-bar--bottom {
+  margin-top: 0;
+}
+.header-bar span {
+  display: block;
+  height: 100%;
+  flex: 1 1 33.333%;
+}
+.header-bar span:nth-child(1) {
+  background: $color-dark-blue;
+}
+.header-bar span:nth-child(2) {
+  background: $color-blue;
+}
+.header-bar span:nth-child(3) {
+  background: $color-light-blue;
+}
+.header-bar--bottom span:nth-child(1) {
+  background: $color-light-blue;
+}
+.header-bar--bottom span:nth-child(2) {
+  background: $color-blue;
+}
+.header-bar--bottom span:nth-child(3) {
+  background: $color-dark-blue;
+}
 .site-header {
   background: $header-bg;
   border-bottom: 1px solid $logo-border;

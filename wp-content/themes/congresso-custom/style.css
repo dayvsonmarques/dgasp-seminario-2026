@@ -1,206 +1,333 @@
-.bold {
-	font-weight: bold;
-}
-/* Banner Overlay Columns */
-
-.banner__container {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-}
-.banner__col {
-	flex-basis: 50%;
-	max-width: 50%;
-}
-.banner__col--text {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	padding-left: 3vw;
-	padding-right: 3vw;
-}
-.banner__title {
-	color: #fff;
-	font-size: 4em;
-	font-weight: bold;
-	margin-bottom: 1rem;
-	margin-top: 0;
-	margin-left: 0;
-	margin-right: 0;
-	margin-bottom: 30px;
-}
-.banner__subtitle {
-	color: #fff;
-	font-size: 2.2em;
-	background: var(--azul-escuro);
-	padding: 20px;
-	margin-bottom: 1.2em;
-	border-radius: 6px;
-}
-.banner__date {
-	color: #fff;
-	font-size: 2em;
-	font-weight: 400;
-	margin-bottom: 1em;
-	background: var(--azul-principal);
-	padding: 20px;
-	border-radius: 6px;
-	display: inline-block;
-}
-/*
-Theme Name: Congresso Custom
-Theme URI: https://example.com/
-Author: Your Name
-Author URI: https://example.com/
-Description: Custom Bootstrap-based theme for Congresso Landing Page
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: congresso-custom
-*/
-
-/* Paleta exclusiva do III Seminário Estadual de Atenção à Saúde Prisional de Pernambuco */
-:root {
-	--azul-escuro: #223254;
-	--azul-principal: #0068ff;
-	--azul-claro: #5497e8;
-	--branco: #ffffff;
-}
-
-.banner-home {
-	padding: 0;
-}
-.banner-img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 0;
-}
-.banner-home {
-	position: relative;
-	width: 100%;
-	min-height: 100vh;
-	overflow: hidden;
-}
-.bg-blue {
-	background: var(--azul-principal) !important;
-}
-.bg-dark-blue {
-	background: var(--azul-escuro) !important;
-}
-.bg-white {
-	background: var(--branco) !important;
-}
-.section-title {
-	font-size: 2.1rem;
-	font-weight: 700;
-}
-.text-white {
-	color: var(--branco) !important;
-}
-.text-blue {
-	color: var(--azul-principal) !important;
-}
-.text-dark-blue {
-	color: var(--azul-escuro) !important;
-}
-.about-img, .schedule-img, .footer-img {
-	width: 100%;
-	max-width: 600px;
-	box-shadow: 0 2px 8px rgba(34,50,84,0.08);
-	margin-bottom: 2rem;
-}
-.evento-card {
-	background: var(--branco);
-	color: var(--azul-escuro);
-	box-shadow: 0 2px 8px rgba(34,50,84,0.08);
-	padding: 1.5rem;
-}
-.card-title {
-	font-size: 1.1rem;
-	font-weight: 700;
-	color: var(--azul-principal);
-}
-.btn-saiba, .btn-cadastro {
-	background: var(--azul-principal) !important;
-	color: var(--branco) !important;
-	border: none;
-	border-radius: 4px;
-	font-weight: 600;
-}
-.btn-cadastro {
-	font-size: 1.1rem;
-	padding: 0.7rem 2.2rem;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 body {
-	background: var(--branco);
-	color: var(--azul-escuro);
-	font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
-.site-header, .navbar {
-	background: var(--branco) !important;
-	color: var(--azul-escuro);
-}
-.navbar .navbar-brand {
-	color: var(--branco) !important;
-	font-weight: bold;
-}
-.navbar-nav .nav-link {
-	color: var(--branco) !important;
-}
-.navbar-nav .nav-link.active {
-	color: var(--azul-claro) !important;
+.header-bar {
+  width: 100%;
+  height: 8px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
 }
 
-.banner {
-	background: linear-gradient(90deg, var(--azul-escuro) 60%, var(--azul-claro) 100%);
-	color: var(--branco);
-}
-.banner h1 {
-	font-size: 2.8rem;
-	font-weight: 700;
-	color: var(--branco);
-}
-.banner p {
-	font-size: 1.3rem;
-	color: var(--branco);
+.header-bar--top {
+  margin-bottom: 0;
 }
 
-.presentation {
-	background: var(--branco);
-	color: var(--azul-escuro);
-	box-shadow: 0 2px 16px rgba(34,50,84,0.08);
-/* Banner Texts - Always White */
-.banner-title, .banner-subtitle, .banner-date {
-	color: #fff !important;
-	/* ...outros estilos... */
+.header-bar--bottom {
+  margin-top: 0;
 }
-	font-weight: 600;
+
+.header-bar span {
+  display: block;
+  height: 100%;
+  flex: 1 1 33.333%;
 }
-.logos {
-	background: var(--azul-claro);
-	border-radius: 16px;
+
+.header-bar span:nth-child(1) {
+  background: #223254;
 }
-.logos img {
-	filter: grayscale(0) brightness(1.1);
-	max-height: 80px;
+
+.header-bar span:nth-child(2) {
+  background: #0068ff;
+}
+
+.header-bar span:nth-child(3) {
+  background: #5497e8;
+}
+
+.header-bar--bottom span:nth-child(1) {
+  background: #5497e8;
+}
+
+.header-bar--bottom span:nth-child(2) {
+  background: #0068ff;
+}
+
+.header-bar--bottom span:nth-child(3) {
+  background: #223254;
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.navbar-brand {
+  color: #0057b8;
+  font-weight: bold;
 }
 
 .site-footer {
-	background: var(--azul-escuro) !important;
-	color: var(--branco);
-	border-top: 4px solid var(--azul-principal);
+  background: #222;
+  color: #fff;
 }
 .site-footer a {
-	color: var(--azul-claro);
+  color: #fff;
+  text-decoration: underline;
+}
+
+.section-about {
+  background: #0068ff url("../img/bg-crosses.png") center center/cover repeat;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 0;
+  z-index: 1;
+  height: 100vh;
+}
+
+.section-about .container,
+.section-about .row,
+.section-about .col-lg-3,
+.section-about .col-lg-9 {
+  position: relative;
+  z-index: 2;
+}
+
+.section-about::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 104, 255, 0.85);
+  z-index: 1;
+}
+
+.section-about .container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.section-about .section-title {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.section-about .section-title span {
+  font-weight: 400;
+}
+
+.section-about .evento-card {
+  background: #ffffff;
+  box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
+  border-radius: 0;
+  padding: 40px 32px 32px 32px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+}
+
+.section-about .card-title {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0068ff;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-about .card-title strong,
+.section-about .card-title .highlight {
+  color: #223254;
+}
+
+.section-about .evento-card p {
+  font-size: 1.1rem;
+  color: #223254;
+  margin-bottom: 32px;
+}
+
+.section-about .btn-saiba {
+  background: #0068ff;
+  color: #ffffff;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0;
+  padding: 12px 0;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  transition: background 0.2s;
+}
+
+.section-about .btn-saiba:hover {
+  background: #223254;
+}
+
+.section-about .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.section-about .col-lg-3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 32px;
+}
+
+.section-about .col-lg-9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-about .row .col-md-6 {
+  padding: 0 16px;
+}
+
+.section-about .row.g-4 {
+  gap: 32px;
+}
+
+@media (max-width: 991px) {
+  .section-about .container {
+    flex-direction: column;
+  }
+  .section-about .col-lg-3 {
+    justify-content: flex-start;
+    padding-right: 0;
+    margin-bottom: 32px;
+  }
+  .section-about .evento-card {
+    min-height: 0;
+    padding: 32px 16px;
+  }
+}
+@media (max-width: 767px) {
+  .section-about {
+    padding: 32px 0;
+  }
+  .section-about .section-title {
+    font-size: 2.2rem;
+  }
+  .section-about .evento-card {
+    padding: 24px 8px;
+  }
+}
+.banner-home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.banner__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.banner__col {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.banner__col--image {
+  background: transparent;
+}
+
+.banner__col--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 80px;
+}
+
+.banner__title {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  background: rgba(34, 50, 84, 0.9);
+  padding: 20px 30px;
+}
+
+.banner__subtitle {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.banner__subtitle strong {
+  font-weight: 700;
+}
+
+.banner__date {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.banner__date .bold {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 991px) {
+  .banner__container {
+    flex-direction: column;
+  }
+  .banner__col {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .banner__col--text {
+    padding: 40px 24px;
+  }
+  .banner__title {
+    font-size: 1.8rem;
+  }
+  .banner__subtitle {
+    font-size: 1.1rem;
+  }
+}
+.banner {
+  background: #fff;
+  color: #fff;
+}
+
+.presentation {
+  background: #f8f9fa;
+  color: #222;
+}
+
+.logos {
+  background: #fff;
+  border: 1px solid #eaeaea;
 }

@@ -7,6 +7,11 @@
 </head>
 <body <?php body_class(); ?>>
 
+<div class="header-bar header-bar--top w-100">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 <header class="site-header" style="background:#fff;border-bottom:6px solid #5497e8;">
     <div class="container-fluid px-0">
         <div class="row align-items-center g-0" style="min-height:90px;">
@@ -27,3 +32,8 @@
         </div>
     </div>
 </header>
+<div class="header-bar header-bar--bottom w-100">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
