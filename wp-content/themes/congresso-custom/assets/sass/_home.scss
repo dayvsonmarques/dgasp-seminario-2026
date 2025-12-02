@@ -1,5 +1,9 @@
 .section-about {
-  background: $color-blue url("../img/bg-crosses.png") center center/cover repeat;
+  background-image: url('assets/img/crosses.jpg');
+  background-color: $color-blue;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -30,6 +34,8 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  position: relative;
+  z-index: 2;
 }
 .section-about .section-title {
   font-family: $font-stack;
@@ -44,11 +50,11 @@
 .section-about .section-title span {
   font-weight: 400;
 }
-.section-about .evento-card {
+.section-about .event-card {
   background: $color-white;
   box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
   border-radius: 0;
-  padding: 40px 32px 32px 32px;
+  padding: 20px;
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
@@ -57,7 +63,7 @@
 }
 .section-about .card-title {
   font-family: $font-stack;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: $color-blue;
   margin-bottom: 16px;
@@ -67,12 +73,14 @@
 .section-about .card-title .highlight {
   color: $color-dark-blue;
 }
-.section-about .evento-card p {
-  font-size: 1.1rem;
+.section-about .event-card p {
+  font-size: 1.2rem;
   color: $color-dark-blue;
   margin-bottom: 32px;
 }
-.section-about .btn-saiba {
+.section-about .btn-saiba,
+.section-about .btn-learn,
+.section-about .btn-topics {
   background: $color-blue;
   color: $color-white;
   font-family: $font-stack;
@@ -84,9 +92,11 @@
   width: 100%;
   text-align: center;
   letter-spacing: 0.02em;
-  transition: background 0.2s;
+  transition: background 0.3s;
 }
-.section-about .btn-saiba:hover {
+.section-about .btn-saiba:hover,
+.section-about .btn-learn:hover,
+.section-about .btn-topics:hover {
   background: $color-dark-blue;
 }
 .section-about .row {
@@ -108,7 +118,8 @@
   padding: 0 16px;
 }
 .section-about .row.g-4 {
-  gap: 32px;
+  gap: 0;
+  row-gap: 32px;
 }
 @media (max-width: 991px) {
   .section-about .container {
@@ -119,9 +130,9 @@
     padding-right: 0;
     margin-bottom: 32px;
   }
-  .section-about .evento-card {
+  .section-about .event-card {
     min-height: 0;
-    padding: 32px 16px;
+    padding: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -131,8 +142,8 @@
   .section-about .section-title {
     font-size: 2.2rem;
   }
-  .section-about .evento-card {
-    padding: 24px 8px;
+  .section-about .event-card {
+    padding: 20px;
   }
 }
 
@@ -222,7 +233,7 @@
   .banner__subtitle {
     font-size: 1.1rem;
   }
-}
+} 
 
 .banner {
   background: $banner-bg;

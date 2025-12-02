@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+.bg-dark-blue {
+  background-color: #223254 !important;
+}
+
 body {
   font-family: "Roboto", Arial, sans-serif;
 }
@@ -113,7 +117,7 @@ body {
   display: flex !important;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .main-menu {
     display: block !important;
   }
@@ -134,7 +138,7 @@ body {
   color: #ffffff;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .header-logo {
     max-height: 50px;
   }
@@ -159,7 +163,11 @@ body {
 }
 
 .section-about {
-  background: #0068ff url("../img/bg-crosses.png") center center/cover repeat;
+  background-image: url("assets/img/crosses.jpg");
+  background-color: #0068ff;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -192,6 +200,8 @@ body {
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  position: relative;
+  z-index: 2;
 }
 
 .section-about .section-title {
@@ -209,11 +219,11 @@ body {
   font-weight: 400;
 }
 
-.section-about .evento-card {
+.section-about .event-card {
   background: #ffffff;
   box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
   border-radius: 0;
-  padding: 40px 32px 32px 32px;
+  padding: 20px;
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
@@ -223,7 +233,7 @@ body {
 
 .section-about .card-title {
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #0068ff;
   margin-bottom: 16px;
@@ -235,13 +245,15 @@ body {
   color: #223254;
 }
 
-.section-about .evento-card p {
-  font-size: 1.1rem;
+.section-about .event-card p {
+  font-size: 1.2rem;
   color: #223254;
   margin-bottom: 32px;
 }
 
-.section-about .btn-saiba {
+.section-about .btn-saiba,
+.section-about .btn-learn,
+.section-about .btn-topics {
   background: #0068ff;
   color: #ffffff;
   font-family: "Roboto", Arial, sans-serif;
@@ -253,10 +265,12 @@ body {
   width: 100%;
   text-align: center;
   letter-spacing: 0.02em;
-  transition: background 0.2s;
+  transition: background 0.3s;
 }
 
-.section-about .btn-saiba:hover {
+.section-about .btn-saiba:hover,
+.section-about .btn-learn:hover,
+.section-about .btn-topics:hover {
   background: #223254;
 }
 
@@ -283,7 +297,8 @@ body {
 }
 
 .section-about .row.g-4 {
-  gap: 32px;
+  gap: 0;
+  row-gap: 32px;
 }
 
 @media (max-width: 991px) {
@@ -295,9 +310,9 @@ body {
     padding-right: 0;
     margin-bottom: 32px;
   }
-  .section-about .evento-card {
+  .section-about .event-card {
     min-height: 0;
-    padding: 32px 16px;
+    padding: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -307,8 +322,8 @@ body {
   .section-about .section-title {
     font-size: 2.2rem;
   }
-  .section-about .evento-card {
-    padding: 24px 8px;
+  .section-about .event-card {
+    padding: 20px;
   }
 }
 .banner-home {

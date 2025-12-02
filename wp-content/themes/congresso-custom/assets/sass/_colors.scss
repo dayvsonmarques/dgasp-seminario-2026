@@ -7,3 +7,7 @@ $color-dark-blue: #223254;
 $color-blue: #0068ff;
 $color-light-blue: #5497e8;
 $color-white: #ffffff;
+
+.bg-dark-blue {
+    background-color: $color-dark-blue !important;
+}

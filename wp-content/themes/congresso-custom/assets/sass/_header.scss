@@ -86,7 +86,7 @@
 .main-menu .d-flex {
   display: flex !important;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .main-menu {
     display: block !important;
   }
@@ -105,7 +105,7 @@
   background: $color-dark-blue;
   color: $color-white;
 }
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .header-logo {
     max-height: 50px;
   }

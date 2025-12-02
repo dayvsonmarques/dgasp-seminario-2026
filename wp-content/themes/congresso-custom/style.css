@@ -159,7 +159,7 @@ body {
 }
 
 .section-about {
-  background: #0068ff url("../img/bg-crosses.png") center center/cover repeat;
+  background: #0068ff url("../img/crosses.png") center center/cover repeat;
   position: relative;
   width: 100%;
   min-height: 100vh;
