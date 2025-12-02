@@ -1,5 +1,5 @@
 <section class="section-about py-5">
-    <div class="container">
+    <div class="container-fluid px-5">
         <div class="row mb-4">
             <div class="col-lg-3 d-flex align-items-center">
                 <h2 class="section-title text-white">

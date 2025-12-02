@@ -178,13 +178,19 @@ h6 {
   z-index: 1;
 }
 .section-about .container,
+.section-about .container-fluid,
 .section-about .row,
 .section-about .col-lg-3,
 .section-about .col-lg-9 {
   position: relative;
   z-index: 2;
 }
-.section-about .container {
+.section-about .container-fluid {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.section-about .container,
+.section-about .container-fluid {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -400,12 +406,17 @@ h6 {
   position: relative;
   min-height: 100vh;
 }
-.section-schedule .container {
+.section-schedule .container,
+.section-schedule .container-fluid {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   position: relative;
   z-index: 2;
+}
+.section-schedule .container-fluid {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .section-schedule .section-title {
   font-family: "Montserrat", Arial, sans-serif;

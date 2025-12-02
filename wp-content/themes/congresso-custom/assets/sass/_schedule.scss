@@ -4,12 +4,18 @@
   position: relative;
   min-height: 100vh;
 
-  .container {
+  .container,
+  .container-fluid {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     position: relative;
     z-index: 2;
+  }
+
+  .container-fluid {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .section-title {
