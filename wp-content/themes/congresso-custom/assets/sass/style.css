@@ -50,15 +50,105 @@ body {
 }
 
 .site-header {
-  background: #fff;
-  border-bottom: 1px solid #eaeaea;
+  background: #ffffff;
+  min-height: 90px;
 }
 
-.navbar-brand {
-  color: #0057b8;
-  font-weight: bold;
+.site-header .row {
+  min-height: 90px;
 }
 
+.header-logo {
+  max-height: 80px;
+  width: auto;
+}
+
+.header-logo--main {
+  max-width: 160px;
+}
+
+.header-logo--gov {
+  max-width: 130px;
+}
+
+.navbar-toggler {
+  background: #0068ff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  bottom: -8px;
+}
+
+.main-menu {
+  font-size: 1.1rem;
+}
+
+.main-menu .d-flex {
+  display: flex !important;
+}
+
+@media (min-width: 992px) {
+  .main-menu {
+    display: block !important;
+  }
+}
+.menu-btn {
+  background: #0068ff;
+  color: #ffffff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.menu-btn:hover {
+  background: #223254;
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  .header-logo {
+    max-height: 50px;
+  }
+  .header-logo--main {
+    max-width: 100px;
+  }
+  .header-logo--gov {
+    max-width: 80px;
+  }
+  .main-menu .menu-btn {
+    width: 100%;
+    margin: 0 16px;
+  }
+}
 .site-footer {
   background: #222;
   color: #fff;
