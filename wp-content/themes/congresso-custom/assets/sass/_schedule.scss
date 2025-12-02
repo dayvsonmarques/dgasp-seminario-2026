@@ -1,35 +1,26 @@
 .section-schedule {
   background: $color-dark-blue;
-  padding: 60px 0;
+  padding: 32px 0;
   position: relative;
   min-height: 100vh;
-  height: 100vh;
 
   .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     position: relative;
     z-index: 2;
-
-    @media (max-width: 991px) {
-      flex-direction: column;
-    }
   }
 
   .section-title {
     font-family: $font-stack;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: $color-white;
     line-height: 1;
     letter-spacing: 0.02em;
     text-align: left;
     margin-bottom: 0;
-
-    @media (max-width: 767px) {
-      font-size: 2.2rem;
-    }
   }
 
   .event-card {
@@ -41,16 +32,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 300px;
-
-    @media (max-width: 991px) {
-      min-height: 0;
-      padding: 20px;
-    }
-
-    @media (max-width: 767px) {
-      padding: 20px;
-    }
+    min-height: auto;
   }
 
   .card-title {
@@ -89,8 +71,27 @@
       padding: 0 16px;
     }
   }
+}
 
-  @media (max-width: 767px) {
-    padding: 32px 0;
+@media (min-width: $breakpoint-md) {
+  .section-schedule {
+    .section-title {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .section-schedule {
+    padding: 60px 0;
+    height: 100vh;
+
+    .container {
+      flex-direction: row;
+    }
+
+    .event-card {
+      min-height: 300px;
+    }
   }
 }
