@@ -38,18 +38,18 @@
   background: $color-white;
   min-height: 90px;
 }
-.site-header .row { 
+.site-header .row {
   min-height: 90px;
 }
 .header-logo {
-  max-height: 80px;
+  max-height: 100px;
   width: auto;
 }
 .header-logo--main {
-  max-width: 160px;
+  max-width: 200px;
 }
 .header-logo--gov {
-  max-width: 130px;
+  max-width: 170px;
 }
 .navbar-toggler {
   background: $color-blue;
@@ -66,7 +66,7 @@
 }
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
-  content: '';
+  content: "";
   display: block;
   width: 24px;
   height: 2px;

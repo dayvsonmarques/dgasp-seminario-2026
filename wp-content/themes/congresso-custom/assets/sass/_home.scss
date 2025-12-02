@@ -173,14 +173,12 @@
 }
 .banner__title {
   font-family: $font-stack;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: $color-white;
   line-height: 1.2;
   margin-bottom: 24px;
   text-transform: uppercase;
-  background: rgba(34, 50, 84, 0.9);
-  padding: 20px 30px;
 }
 .banner__subtitle {
   font-family: $font-stack;
@@ -189,6 +187,8 @@
   color: $color-white;
   line-height: 1.4;
   margin-bottom: 20px;
+  background: $color-dark-blue;
+  padding: 10px;
 }
 .banner__subtitle strong {
   font-weight: 700;
@@ -198,6 +198,8 @@
   font-size: 1.1rem;
   font-weight: 400;
   color: $color-white;
+  background: $color-blue;
+  padding: 10px;
 }
 .banner__date .bold {
   font-weight: 700;
