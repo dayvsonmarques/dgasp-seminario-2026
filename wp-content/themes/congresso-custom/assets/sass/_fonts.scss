@@ -1,8 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+// Body - Montserrat
 body {
-  font-family: $font-stack;
+  font-family: $font-body;
+  font-weight: 400;
 }
-h1, h2, h3, h4, h5, h6 {
+
+// Headings - Bebas Neue
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .bold {

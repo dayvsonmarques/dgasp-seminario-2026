@@ -1,10 +1,23 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap");
 .bg-dark-blue {
   background-color: #223254 !important;
 }
 
 body {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .bold {
@@ -177,7 +190,7 @@ body {
   align-items: stretch;
 }
 .section-about .section-title {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 2.2rem;
   color: #ffffff;
   line-height: 1;
@@ -205,7 +218,7 @@ body {
   margin-bottom: 32px;
 }
 .section-about .card-title {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: #0068ff;
@@ -221,7 +234,7 @@ body {
 .section-about .btn-topics {
   background: #0068ff;
   color: #ffffff;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   border: none;
@@ -303,7 +316,7 @@ body {
   padding: 40px 24px;
 }
 .banner__title {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;
@@ -312,7 +325,7 @@ body {
   text-transform: uppercase;
 }
 .banner__subtitle {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   color: #ffffff;
@@ -325,7 +338,7 @@ body {
   font-weight: 700;
 }
 .banner__date {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   color: #ffffff;
@@ -395,7 +408,7 @@ body {
   z-index: 2;
 }
 .section-schedule .section-title {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 2.2rem;
   font-weight: 700;
   color: #ffffff;
@@ -416,7 +429,7 @@ body {
   min-height: auto;
 }
 .section-schedule .card-title {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: #0068ff;
@@ -426,7 +439,7 @@ body {
 .section-schedule .btn-learn {
   background: #0068ff;
   color: #ffffff;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   border: none;

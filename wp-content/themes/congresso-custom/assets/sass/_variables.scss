@@ -1,6 +1,11 @@
 $primary: #0057b8;
 $secondary: #ffd700;
-$font-stack: 'Roboto', Arial, sans-serif;
+
+// Typography
+$font-heading: 'Bebas Neue', Arial, sans-serif;
+$font-body: 'Montserrat', Arial, sans-serif;
+$font-stack: $font-body; // Fallback compatibility
+
 $body-bg: #f8f9fa;
 $header-bg: #fff;
 $footer-bg: #222;
