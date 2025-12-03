@@ -269,3 +269,19 @@
     letter-spacing: 0.05em;
   }
 }
+
+// Top bar above About section
+.section-about {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: $color-light-blue;
+    z-index: 1;
+  }
+}
