@@ -28,6 +28,41 @@ h6 {
   font-weight: 300 !important;
 }
 
+.section-title {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 5em;
+  color: #ffffff;
+  line-height: 1.1em;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-bottom: 0;
+}
+.section-title span {
+  font-weight: 400;
+  display: inline;
+}
+
+.event-card {
+  background: #ffffff;
+  box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
+  border-radius: 0;
+  padding: 20px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: auto;
+}
+.event-card .card-title {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #223254;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
 .header-bar {
   width: 100%;
   height: 8px;
@@ -195,41 +230,14 @@ h6 {
   flex-direction: column;
   align-items: stretch;
 }
-.section-about .section-title {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 2.2rem;
-  color: #ffffff;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  text-align: left;
-  margin-bottom: 0;
-}
-.section-about .section-title span {
-  font-weight: 400;
-}
-.section-about .event-card {
-  background: #ffffff;
-  box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
-  border-radius: 0;
-  padding: 20px;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: auto;
-}
 .section-about .event-card p {
   font-size: 1.2rem;
   color: #223254;
   margin-bottom: 32px;
 }
 .section-about .card-title {
-  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.8rem;
-  font-weight: 700;
   color: #0068ff;
-  margin-bottom: 16px;
-  line-height: 1.2;
 }
 .section-about .card-title strong,
 .section-about .card-title .highlight {
@@ -366,11 +374,6 @@ h6 {
   border: 1px solid #eaeaea;
 }
 
-@media (min-width: 768px) {
-  .section-about .section-title {
-    font-size: 3.5rem;
-  }
-}
 @media (min-width: 992px) {
   .section-about .container {
     flex-direction: row;
@@ -379,9 +382,6 @@ h6 {
     justify-content: flex-end;
     padding-right: 32px;
     margin-bottom: 0;
-  }
-  .section-about .event-card {
-    min-height: 420px;
   }
   .banner__container {
     flex-direction: row;
@@ -400,11 +400,29 @@ h6 {
     font-size: 1.3rem;
   }
 }
+.participation .section-title {
+  color: #0068ff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.participation .text-blue {
+  color: #0068ff;
+}
+.participation .text-dark-blue {
+  color: #223254;
+  margin-bottom: 2rem;
+}
+.participation .btn-register {
+  border-radius: 0;
+  padding: 12px 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .section-schedule {
   background: #223254;
-  padding: 32px 0;
   position: relative;
-  min-height: 100vh;
 }
 .section-schedule .container,
 .section-schedule .container-fluid {
@@ -418,34 +436,8 @@ h6 {
   padding-left: 40px;
   padding-right: 40px;
 }
-.section-schedule .section-title {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  text-align: left;
-  margin-bottom: 0;
-}
-.section-schedule .event-card {
-  background: #ffffff;
-  box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
-  border-radius: 0;
-  padding: 20px;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: auto;
-}
 .section-schedule .card-title {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
   color: #0068ff;
-  margin-bottom: 16px;
-  line-height: 1.2;
 }
 .section-schedule .btn-learn {
   background: #0068ff;
@@ -470,22 +462,4 @@ h6 {
 }
 .section-schedule .row .col-md-6 {
   padding: 0 16px;
-}
-
-@media (min-width: 768px) {
-  .section-schedule .section-title {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 992px) {
-  .section-schedule {
-    padding: 60px 0;
-    height: 100vh;
-  }
-  .section-schedule .container {
-    flex-direction: row;
-  }
-  .section-schedule .event-card {
-    min-height: 300px;
-  }
 }

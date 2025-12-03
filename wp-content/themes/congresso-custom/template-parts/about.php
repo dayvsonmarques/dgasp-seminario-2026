@@ -1,7 +1,7 @@
 <section class="section-about py-5">
-    <div class="container-fluid px-5">
-        <div class="row mb-4">
-            <div class="col-lg-3 d-flex align-items-center">
+    <div class="container-fluid">
+        <div class="row my-5">
+            <div class="col-lg-3 ">
                 <h2 class="section-title text-white">
                     <span class="bold">SOBRE</span> 
                     <span class="light">O</span>

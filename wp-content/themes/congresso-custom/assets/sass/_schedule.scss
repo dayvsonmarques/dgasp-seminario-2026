@@ -1,8 +1,6 @@
 .section-schedule {
   background: $color-dark-blue;
-  padding: 32px 0;
   position: relative;
-  min-height: 100vh;
 
   .container,
   .container-fluid {
@@ -18,36 +16,9 @@
     padding-right: 40px;
   }
 
-  .section-title {
-    font-family: $font-stack;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: $color-white;
-    line-height: 1;
-    letter-spacing: 0.02em;
-    text-align: left;
-    margin-bottom: 0;
-  }
-
-  .event-card {
-    background: $color-white;
-    box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
-    border-radius: 0;
-    padding: 20px;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: auto;
-  }
-
+  // Specific overrides for schedule section only
   .card-title {
-    font-family: $font-stack;
-    font-size: 2rem;
-    font-weight: 700;
     color: $color-blue;
-    margin-bottom: 16px;
-    line-height: 1.2;
   }
 
   .btn-learn {
@@ -75,29 +46,6 @@
 
     .col-md-6 {
       padding: 0 16px;
-    }
-  }
-}
-
-@media (min-width: $breakpoint-md) {
-  .section-schedule {
-    .section-title {
-      font-size: 3rem;
-    }
-  }
-}
-
-@media (min-width: $breakpoint-lg) {
-  .section-schedule {
-    padding: 60px 0;
-    height: 100vh;
-
-    .container {
-      flex-direction: row;
-    }
-
-    .event-card {
-      min-height: 300px;
     }
   }
 }
