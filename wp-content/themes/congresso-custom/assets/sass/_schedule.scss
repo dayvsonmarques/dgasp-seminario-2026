@@ -1,6 +1,12 @@
 .section-schedule {
   background: $color-dark-blue;
+  background-image: url('assets/img/schedule-half-circle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
+
+  padding: 10em 0;
 
   .container,
   .container-fluid {
@@ -14,6 +20,25 @@
   .container-fluid {
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: $color-blue;
+    z-index: 1;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
   }
 
   // Specific overrides for schedule section only

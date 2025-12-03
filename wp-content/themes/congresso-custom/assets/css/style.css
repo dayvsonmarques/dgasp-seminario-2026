@@ -422,7 +422,12 @@ h6 {
 
 .section-schedule {
   background: #223254;
+  background-image: url("assets/img/schedule-half-circle.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
+  padding: 10em 0;
 }
 .section-schedule .container,
 .section-schedule .container-fluid {
@@ -435,6 +440,21 @@ h6 {
 .section-schedule .container-fluid {
   padding-left: 40px;
   padding-right: 40px;
+}
+.section-schedule::before, .section-schedule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #0068ff;
+  z-index: 1;
+}
+.section-schedule::before {
+  top: 0;
+}
+.section-schedule::after {
+  bottom: 0;
 }
 .section-schedule .card-title {
   color: #0068ff;

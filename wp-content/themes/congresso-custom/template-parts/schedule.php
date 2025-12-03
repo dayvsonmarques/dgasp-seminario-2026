@@ -1,4 +1,4 @@
-<section class="section-schedule py-5">
+<section class="section-schedule">
     <div class="container-fluid">
         <div class="row my-5">
             <div class="col-lg-5 d-flex align-items-center">
