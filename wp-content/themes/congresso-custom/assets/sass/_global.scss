@@ -1,9 +1,6 @@
-// Global Styles - Shared across sections
-
-// Section Title - Used in About, Schedule, Participation
 .section-title {
   font-family: $font-heading;
-  font-size: 5em;
+  font-size: 6em;
   color: $color-white;
   line-height: 1.1em;
   letter-spacing: 0.02em;
@@ -16,7 +13,6 @@
   }
 }
 
-// Event Cards - Used in About and Schedule
 .event-card {
   background: $color-white;
   box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
