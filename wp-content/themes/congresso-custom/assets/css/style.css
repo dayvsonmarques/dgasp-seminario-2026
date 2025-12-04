@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@300;700&family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap");
 .bg-dark-blue {
   background-color: #223254 !important;
 }
@@ -36,6 +36,13 @@ h6 {
   font-family: "Montserrat", Arial, sans-serif !important;
 }
 
+html,
+body {
+  width: 100%;
+  min-width: 100%;
+  overflow-x: hidden;
+}
+
 .section-title {
   font-family: "Bebas Neue", Arial, sans-serif;
   font-size: 4em;
@@ -55,7 +62,6 @@ h6 {
   box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
   border-radius: 0;
   padding: 20px;
-  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -120,39 +126,60 @@ h6 {
   width: auto;
 }
 .header-logo--main {
-  max-width: 100px;
+  max-width: 25vw;
 }
 .header-logo--gov {
-  max-width: 80px;
+  max-width: 25vw;
 }
 
 .navbar-toggler {
-  background: #0068ff;
+  background: transparent;
   border: none;
   padding: 8px 12px;
-  border-radius: 4px;
+  border-radius: 0;
+  position: relative;
+  z-index: 1101;
 }
 .navbar-toggler-icon {
   display: inline-block;
-  width: 24px;
-  height: 2px;
-  background: #ffffff;
+  width: 32px;
+  height: 3px;
+  background: #0068ff;
   position: relative;
+  transition: all 0.3s ease;
 }
 .navbar-toggler-icon::before, .navbar-toggler-icon::after {
   content: "";
   display: block;
-  width: 24px;
-  height: 2px;
-  background: #ffffff;
+  width: 32px;
+  height: 3px;
+  background: #0068ff;
   position: absolute;
   left: 0;
+  transition: all 0.3s ease;
 }
 .navbar-toggler-icon::before {
-  top: -8px;
+  top: -10px;
 }
 .navbar-toggler-icon::after {
-  bottom: -8px;
+  top: 10px;
+}
+.navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
+  background: transparent;
+}
+.navbar-toggler[aria-expanded=true] .navbar-toggler-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded=true] .navbar-toggler-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.navbar-toggler[aria-expanded=true] {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  padding: 20px;
 }
 
 .main-menu {
@@ -164,6 +191,78 @@ h6 {
 .main-menu .menu-btn {
   width: 100%;
   margin: 0 16px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 992px) {
+  .main-menu.collapse:not(.show) {
+    display: none !important;
+  }
+  .navbar-collapse:not(.show) {
+    display: none !important;
+  }
+  .main-menu .menu-btn {
+    background: transparent !important;
+    color: #223254 !important;
+    border-radius: 0;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    letter-spacing: 0.02em;
+  }
+  .main-menu .menu-btn:hover {
+    color: #223254;
+    text-decoration: underline;
+    background: transparent !important;
+  }
+  .main-menu.collapse {
+    transition: none;
+  }
+  .main-menu.collapse.show {
+    opacity: 0;
+    animation: menuOverlayFadeIn 120ms ease-out forwards;
+    will-change: opacity;
+  }
+}
+@keyframes menuOverlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Fullscreen overlay when menu is open */
+.main-menu.collapse.show {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 1050;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.main-menu.collapse.show .d-flex {
+  flex-direction: column !important;
+  align-items: center;
+  gap: 16px;
+}
+.main-menu.collapse.show .menu-btn {
+  width: auto;
+  font-size: 2.2rem;
+  background: transparent;
+  color: #223254;
+  border-radius: 0;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  letter-spacing: 0.02em;
+}
+.main-menu.collapse.show .menu-btn:hover {
+  color: #223254;
+  text-decoration: none;
 }
 
 .menu-btn {
@@ -182,15 +281,6 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-  .header-logo {
-    max-height: 400px;
-  }
-  .header-logo--main {
-    max-width: 300px;
-  }
-  .header-logo--gov {
-    max-width: 280px;
-  }
   .main-menu {
     display: block !important;
   }
@@ -234,6 +324,11 @@ h6 {
 .border-start-blue {
   border-left-color: #0068ff !important;
   border-left-width: 3px !important;
+}
+
+.footer-contact .border-start-blue {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .section-about {
@@ -408,6 +503,18 @@ h6 {
   border: 1px solid #eaeaea;
 }
 
+@media (max-width: 768px) {
+  .banner-home {
+    height: auto;
+  }
+  .banner-img {
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: #fff;
+  }
+}
 @media (min-width: 992px) {
   .section-about .container {
     flex-direction: row;
@@ -432,6 +539,14 @@ h6 {
   }
   .banner__subtitle {
     font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .section-about .event-card {
+    margin-bottom: 24px;
+  }
+  .section-about .row.g-4 {
+    row-gap: 24px;
   }
 }
 .section-participation {
@@ -534,4 +649,13 @@ h6 {
 }
 .section-schedule .row .col-md-6 {
   padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+  .section-schedule .event-card {
+    margin-bottom: 24px;
+  }
+  .section-schedule .row {
+    row-gap: 24px;
+  }
 }

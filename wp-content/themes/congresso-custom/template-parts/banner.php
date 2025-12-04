@@ -1,8 +1,11 @@
 <section class="banner-home position-relative overflow-hidden">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner.jpg" alt="Banner Hero Seminário" class="img-fluid banner-img">
+    <picture>
+        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/banner-mobile.jpg" media="(max-width: 991.98px)">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner.jpg" alt="Banner Hero Seminário" class="img-fluid banner-img">
+    </picture>
     <div class="banner__container position-absolute top-0 start-0 w-100 h-100 d-flex">
         <div class="banner__col banner__col--image"></div>
-        <div class="banner__col banner__col--text d-flex flex-column justify-content-center align-items-start">
+        <div class="banner__col banner__col--text d-flex flex-column justify-content-center align-items-start d-none">
             <h1 class="banner__title">
                 <span class="bold">III SEMINÁRIO</span> ESTADUAL<br>
                 DE <span class="bold">ATENÇÃO</span> À <span class="bold">SAÚDE</span><br>

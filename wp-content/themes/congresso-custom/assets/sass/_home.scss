@@ -192,6 +192,21 @@
   border: 1px solid $logo-border;
 }
 
+// Mobile adjustments: prevent banner image from being cropped or stretched
+@media (max-width: $breakpoint-md) {
+  .banner-home {
+    height: auto; // Let height follow image
+  }
+
+  .banner-img {
+    height: auto; // Maintain intrinsic aspect ratio
+    object-fit: contain; // Show full image without cropping
+    object-position: center; // Center image within container
+    display: block; // Avoid inline gaps
+    background-color: $banner-bg; // Fill any letterboxing with banner background
+  }
+}
+
 @media (min-width: $breakpoint-lg) {
   .section-about {
     .container {
@@ -225,6 +240,19 @@
 
     &__subtitle {
       font-size: 1.3rem;
+    }
+  }
+}
+
+// Responsive spacing for event cards
+@media (max-width: $breakpoint-md) {
+  .section-about {
+    .event-card {
+      margin-bottom: 24px; // Add space between cards on small screens
+    }
+
+    .row.g-4 {
+      row-gap: 24px; // Slightly increase row gap for better breathing room
     }
   }
 }

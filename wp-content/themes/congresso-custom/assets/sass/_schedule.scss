@@ -73,3 +73,16 @@
     }
   }
 }
+
+// Responsive spacing between schedule cards
+@media (max-width: $breakpoint-md) {
+  .section-schedule {
+    .event-card {
+      margin-bottom: 24px; // add vertical spacing between cards
+    }
+
+    .row {
+      row-gap: 24px; // ensure grid rows have breathing room
+    }
+  }
+}

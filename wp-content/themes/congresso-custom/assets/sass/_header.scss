@@ -59,45 +59,70 @@
   width: auto;
 
   &--main {
-    max-width: 100px;
+    max-width: 25vw;
   }
 
   &--gov {
-    max-width: 80px;
+    max-width: 25vw;
   }
 }
 
 .navbar-toggler {
-  background: $color-blue;
+  background: transparent;
   border: none;
   padding: 8px 12px;
-  border-radius: 4px;
+  border-radius: 0;
+  position: relative;
+  z-index: 1101; // ensure above fullscreen overlay
 
   &-icon {
     display: inline-block;
-    width: 24px;
-    height: 2px;
-    background: $color-white;
+    width: 32px;
+    height: 3px;
+    background: $color-blue;
     position: relative;
+    transition: all 0.3s ease;
 
     &::before,
     &::after {
       content: "";
       display: block;
-      width: 24px;
-      height: 2px;
-      background: $color-white;
+      width: 32px;
+      height: 3px;
+      background: $color-blue;
       position: absolute;
       left: 0;
+      transition: all 0.3s ease;
     }
 
     &::before {
-      top: -8px;
+      top: -10px;
     }
 
     &::after {
-      bottom: -8px;
+      top: 10px;
     }
+  }
+
+  &[aria-expanded="true"] .navbar-toggler-icon {
+    background: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &[aria-expanded="true"] {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    padding: 20px;
   }
 }
 
@@ -111,6 +136,88 @@
   .menu-btn {
     width: 100%;
     margin: 0 16px;
+    font-size: 1.2rem;
+  }
+}
+
+// Mobile: hide the default collapsed menu content to avoid duplication
+@media (max-width: $breakpoint-lg) {
+  .main-menu.collapse:not(.show) {
+    display: none !important;
+  }
+
+  // Extra safeguard: hide any Bootstrap navbar-collapse when not shown
+  .navbar-collapse:not(.show) {
+    display: none !important;
+  }
+
+  // Prevent blue flash on mobile: neutralize default button styling
+  .main-menu .menu-btn {
+    background: transparent !important;
+    color: $color-dark-blue !important;
+    border-radius: 0;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    letter-spacing: 0.02em;
+  }
+
+  .main-menu .menu-btn:hover {
+    color: $color-dark-blue;
+    text-decoration: underline;
+    background: transparent !important;
+  }
+
+  // Smooth overlay appearance
+  .main-menu.collapse {
+    transition: none; // disable Bootstrap height transition to avoid flicker
+  }
+
+  .main-menu.collapse.show {
+    opacity: 0;
+    animation: menuOverlayFadeIn 120ms ease-out forwards;
+    will-change: opacity;
+  }
+}
+
+@keyframes menuOverlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Fullscreen overlay when menu is open */
+.main-menu.collapse.show {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $color-white;
+  z-index: 1050; // above header
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  .d-flex {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .menu-btn {
+    width: auto;
+    font-size: 2.2rem;
+    background: transparent;
+    color: $color-dark-blue;
+    border-radius: 0;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    letter-spacing: 0.02em;
+  }
+
+  .menu-btn:hover {
+    color: $color-dark-blue;
+    text-decoration: none;
   }
 }
 
@@ -131,17 +238,17 @@
 }
 
 @media (min-width: $breakpoint-xl) {
-  .header-logo {
-    max-height: 400px;
+  // .header-logo {
+  //   max-height: 400px;
 
-    &--main {
-      max-width: 300px;
-    }
+  //   &--main {
+  //     max-width: 300px;
+  //   }
 
-    &--gov {
-      max-width: 280px;
-    }
-  }
+  //   &--gov {
+  //     max-width: 280px;
+  //   }
+  // }
 
   .main-menu {
     display: block !important;

@@ -7,7 +7,7 @@
             <div class="col-12 col-lg-1"></div>
             <div class="col-12 col-lg-3">
                 <nav class="footer-menu mt-2">
-                    <div class="row pt-5">
+                    <div class="row pt-5 pb-5">
                         <div class="col-6 col-lg-4 d-flex flex-column footer-menu__col footer-menu__col--left">
                             <a href="#" class="footer-link text-white text-decoration-none mb-2">INÍCIO</a>
                             <a href="#" class="footer-link text-white text-decoration-none">SOBRE</a>
@@ -22,7 +22,7 @@
             <div class="col-12 col-lg-4 pt-4">
                 <div class="footer-contact fs-6 p-4">
                     <div class="border-start border-start-blue ps-5">
-                        <div class="fw-bold h4 pb-3 ff-heading">CONTATO</div>
+                        <div class="fw-bold h1 pb-3 ff-heading">CONTATO</div>
                         <p class="h5 light text-nowrap pb-2">Email: loremipsum@gmail.com</p>
                         <p class="h5 light text-nowrap">Telefone: (81) xxxxx - xxxx
                     </div>

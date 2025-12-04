@@ -20,14 +20,13 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-header.png" alt="Logo Seminário" class="header-logo header-logo--main">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-gov.br.png" alt="Logo Governo PE" class="header-logo header-logo--gov">
                 </div>
-                <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler d-xl-none" type="button" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation" id="menuToggle">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
             <div class="col-12 col-xl-8">
-                <nav class="main-menu collapse navbar-collapse" id="mainMenu">
+                <nav class="main-menu collapse d-none" id="mainMenu">
                     <div class="d-flex flex-column flex-xl-row justify-content-xl-end gap-2 pe-xl-4 pb-3 pb-xl-0">
-                        <a href="#" class="menu-btn">INÍCIO</a>
                         <a href="#" class="menu-btn">SOBRE</a>
                         <a href="#" class="menu-btn">COMISSÕES</a>
                         <a href="#" class="menu-btn">EDITAL</a>
@@ -44,3 +43,5 @@
     <span></span>
     <span></span>
 </div>
+
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/header-menu.js" defer></script>
