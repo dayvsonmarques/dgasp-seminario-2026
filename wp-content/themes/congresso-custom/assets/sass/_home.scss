@@ -109,7 +109,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top; // prioritize top alignment to avoid bottom cropping when using cover
 }
 
 .banner {
@@ -193,15 +193,15 @@
 }
 
 // Mobile adjustments: prevent banner image from being cropped or stretched
-@media (max-width: $breakpoint-md) {
+@media (max-width: $breakpoint-lg) {
   .banner-home {
-    height: auto; // Let height follow image
+    height: auto; // Let container height follow image on smaller screens
   }
 
   .banner-img {
-    height: auto; // Maintain intrinsic aspect ratio
-    object-fit: contain; // Show full image without cropping
-    object-position: center; // Center image within container
+    height: 100vh; // prioritize visible height
+    object-fit: contain; // show full image without cropping
+    object-position: center; // center image within viewport
     display: block; // Avoid inline gaps
     background-color: $banner-bg; // Fill any letterboxing with banner background
   }

@@ -429,7 +429,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
 }
 
 .banner {
@@ -503,12 +503,12 @@ body {
   border: 1px solid #eaeaea;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .banner-home {
     height: auto;
   }
   .banner-img {
-    height: auto;
+    height: 100vh;
     object-fit: contain;
     object-position: center;
     display: block;
@@ -649,13 +649,4 @@ body {
 }
 .section-schedule .row .col-md-6 {
   padding: 0 16px;
-}
-
-@media (max-width: 768px) {
-  .section-schedule .event-card {
-    margin-bottom: 24px;
-  }
-  .section-schedule .row {
-    row-gap: 24px;
-  }
 }
