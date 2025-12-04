@@ -6,3 +6,31 @@
     text-decoration: underline;
   }
 }
+
+.footer-bar-top {
+  border-top: 6px solid $color-light-blue;
+}
+
+.footer-logo {
+  width: auto;
+}
+
+.footer-menu .footer-link {
+  font-family: $font-body;
+  font-size: 1.6rem;
+  letter-spacing: -1.5px;
+  font-weight: 300;
+}
+
+.footer-menu__col--left {
+  padding-left: 16px;
+}
+
+.footer-menu__col--right {
+  padding-right: 16px;
+}
+
+.border-start-blue {
+  border-left-color: $color-blue !important;
+  border-left-width: 3px !important;
+}

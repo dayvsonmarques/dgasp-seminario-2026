@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@300;700&family=Montserrat:wght@300;400;500;600;700&display=swap");
 .bg-dark-blue {
   background-color: #223254 !important;
 }
@@ -28,9 +28,17 @@ h6 {
   font-weight: 300 !important;
 }
 
+.ff-heading {
+  font-family: "Bebas Neue", Arial, sans-serif !important;
+}
+
+.ff-secondary {
+  font-family: "Montserrat", Arial, sans-serif !important;
+}
+
 .section-title {
   font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 6em;
+  font-size: 4em;
   color: #ffffff;
   line-height: 1.1em;
   letter-spacing: 0.02em;
@@ -65,7 +73,7 @@ h6 {
 
 .header-bar {
   width: 100%;
-  height: 8px;
+  height: 10px;
   display: flex;
   flex-direction: row;
   overflow: hidden;
@@ -82,10 +90,10 @@ h6 {
   flex: 1 1 33.333%;
 }
 .header-bar span:nth-child(1) {
-  background: #223254;
+  background: #0068ff;
 }
 .header-bar span:nth-child(2) {
-  background: #0068ff;
+  background: #223254;
 }
 .header-bar span:nth-child(3) {
   background: #5497e8;
@@ -109,7 +117,6 @@ h6 {
 }
 
 .header-logo {
-  max-height: 50px;
   width: auto;
 }
 .header-logo--main {
@@ -176,13 +183,13 @@ h6 {
 
 @media (min-width: 1200px) {
   .header-logo {
-    max-height: 100px;
+    max-height: 400px;
   }
   .header-logo--main {
-    max-width: 200px;
+    max-width: 300px;
   }
   .header-logo--gov {
-    max-width: 170px;
+    max-width: 280px;
   }
   .main-menu {
     display: block !important;
@@ -199,6 +206,34 @@ h6 {
 .site-footer a {
   color: #fff;
   text-decoration: underline;
+}
+
+.footer-bar-top {
+  border-top: 6px solid #5497e8;
+}
+
+.footer-logo {
+  width: auto;
+}
+
+.footer-menu .footer-link {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: -1.5px;
+  font-weight: 300;
+}
+
+.footer-menu__col--left {
+  padding-left: 16px;
+}
+
+.footer-menu__col--right {
+  padding-right: 16px;
+}
+
+.border-start-blue {
+  border-left-color: #0068ff !important;
+  border-left-width: 3px !important;
 }
 
 .section-about {
@@ -330,11 +365,10 @@ h6 {
   padding: 40px 24px;
 }
 .banner__title {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Bebas Neue", Arial, sans-serif;
   font-size: 1.8rem;
-  font-weight: 700;
   color: #ffffff;
-  line-height: 1.2;
+  line-height: 1.3;
   margin-bottom: 24px;
   text-transform: uppercase;
 }
@@ -441,7 +475,7 @@ h6 {
 .section-schedule {
   background: #223254;
   background-image: url("assets/img/schedule-half-circle.png");
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;

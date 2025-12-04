@@ -4,9 +4,9 @@
         <div class="banner__col banner__col--image"></div>
         <div class="banner__col banner__col--text d-flex flex-column justify-content-center align-items-start">
             <h1 class="banner__title">
-                III SEMINÁRIO ESTADUAL<br>
-                DE ATENÇÃO À SAÚDE<br>
-                PRISIONAL DE PERNAMBUCO
+                <span class="bold">III SEMINÁRIO</span> ESTADUAL<br>
+                DE <span class="bold">ATENÇÃO</span> À <span class="bold">SAÚDE</span><br>
+                <span class="bold">PRISIONAL</span> DE <span class="bold">PERNAMBUCO</span>
             </h1>
             <p class="banner__subtitle">
                 <strong>10 ANOS</strong> DA <strong>PNAISP</strong> EM PERNAMBUCO:<br>MEMÓRIA, CUIDADO E COMPROMISSO

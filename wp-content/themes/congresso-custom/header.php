@@ -12,7 +12,7 @@
     <span></span>
     <span></span>
 </div>
-<header class="site-header">
+<header class="site-header py-5">
     <div class="container-fluid px-0">
         <div class="row align-items-center g-0">
             <div class="col-12 col-xl-4 d-flex align-items-center justify-content-between gap-3 ps-4 pe-4 py-3 py-xl-0">
