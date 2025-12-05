@@ -1,0 +1,61 @@
+.section-login {
+  background: $banner-bg;
+  color: $text-color;
+  padding: 80px 0;
+
+  h1 {
+    font-family: $font-heading;
+    color: $color-dark-blue;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  #congresso-loginform {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    padding: 24px;
+    border-radius: 0;
+
+    label {
+      font-family: $font-stack;
+      font-weight: 500;
+      color: $color-dark-blue;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      border-radius: 0;
+      border: 1px solid #ccc;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      font-family: $font-stack;
+    }
+
+    .forgetmenot {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0 16px;
+    }
+
+    .submit .button-primary {
+      background: $color-blue;
+      border: none;
+      border-radius: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: 700;
+      padding: 10px 16px;
+    }
+
+    .submit .button-primary:hover {
+      background: $color-dark-blue;
+    }
+  }
+
+  .lostpassword-link a {
+    color: $color-blue;
+  }
+}

@@ -1,0 +1,81 @@
+.section-certificados {
+  background: $body-bg;
+  color: $text-color;
+  padding: 80px 0;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: $color-light-blue;
+    z-index: 1;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  h1 {
+    font-family: $font-heading;
+    color: $color-blue;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .card-title {
+    font-family: $font-heading;
+    color: $color-dark-blue;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .btn-primary {
+    background: $color-blue;
+    color: $color-white;
+    font-family: $font-stack;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    border: none;
+    border-radius: 0;
+    padding: 10px 16px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: $color-dark-blue;
+    }
+  }
+
+  .alert {
+    border-radius: 0;
+  }
+
+  // Spacing between cards on small screens
+  @media (max-width: $breakpoint-md) {
+    .row.g-4 {
+      row-gap: 24px;
+    }
+
+    .card {
+      margin-bottom: 12px;
+    }
+  }
+}

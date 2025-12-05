@@ -650,3 +650,57 @@ body {
 .section-schedule .row .col-md-6 {
   padding: 0 16px;
 }
+
+.section-login {
+  background: #fff;
+  color: #222;
+  padding: 80px 0;
+}
+.section-login h1 {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  color: #223254;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.section-login #congresso-loginform {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  padding: 24px;
+  border-radius: 0;
+}
+.section-login #congresso-loginform label {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  color: #223254;
+  margin-bottom: 4px;
+}
+.section-login #congresso-loginform input[type=text],
+.section-login #congresso-loginform input[type=password] {
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+.section-login #congresso-loginform .forgetmenot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 16px;
+}
+.section-login #congresso-loginform .submit .button-primary {
+  background: #0068ff;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  padding: 10px 16px;
+}
+.section-login #congresso-loginform .submit .button-primary:hover {
+  background: #223254;
+}
+.section-login .lostpassword-link a {
+  color: #0068ff;
+}
