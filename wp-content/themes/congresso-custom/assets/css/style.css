@@ -188,10 +188,16 @@ body {
 .main-menu .d-flex {
   display: flex !important;
 }
-.main-menu .menu-btn {
-  width: 100%;
-  margin: 0 16px;
-  font-size: 1.2rem;
+.main-menu a {
+  text-decoration: none;
+}
+.main-menu .navbar-nav {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+.main-menu .navbar-nav > li {
+  display: block;
 }
 
 @media (max-width: 992px) {
@@ -201,18 +207,20 @@ body {
   .navbar-collapse:not(.show) {
     display: none !important;
   }
-  .main-menu .menu-btn {
+  .main-menu a {
     background: transparent !important;
-    color: #223254 !important;
+    color: #000000 !important;
     border-radius: 0;
-    padding: 0.4rem 0.8rem;
+    padding: 2vh 3vh;
     text-decoration: none;
     transition: color 0.2s ease;
     letter-spacing: 0.02em;
+    font-size: clamp(1.4rem, 5vh, 3rem);
+    text-align: center;
   }
-  .main-menu .menu-btn:hover {
-    color: #223254;
-    text-decoration: underline;
+  .main-menu a:hover {
+    color: #000000;
+    text-decoration: none;
     background: transparent !important;
   }
   .main-menu.collapse {
@@ -244,49 +252,58 @@ body {
   align-items: center;
   justify-content: center;
 }
+.main-menu.collapse.show .navbar-nav,
 .main-menu.collapse.show .d-flex {
+  display: flex !important;
   flex-direction: column !important;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  gap: 3vh;
+  text-align: center;
 }
-.main-menu.collapse.show .menu-btn {
+.main-menu.collapse.show .main-menu a {
   width: auto;
-  font-size: 2.2rem;
   background: transparent;
-  color: #223254;
+  color: #000000 !important;
   border-radius: 0;
-  padding: 0.4rem 0.8rem;
   text-decoration: none;
   transition: color 0.2s ease;
   letter-spacing: 0.02em;
-}
-.main-menu.collapse.show .menu-btn:hover {
-  color: #223254;
-  text-decoration: none;
-}
-
-.menu-btn {
-  background: #0068ff;
-  color: #ffffff;
-  padding: 0.6rem 1.4rem;
-  border-radius: 4px;
-  font-weight: 600;
-  text-decoration: none;
   text-align: center;
-  transition: background 0.3s;
 }
-.menu-btn:hover {
-  background: #223254;
-  color: #ffffff;
+.main-menu.collapse.show .main-menu a:hover {
+  color: #000000;
+  text-decoration: none;
 }
 
 @media (min-width: 1200px) {
   .main-menu {
     display: block !important;
   }
-  .main-menu .menu-btn {
-    width: auto;
-    margin: 0;
+  .main-menu .navbar-nav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .main-menu .navbar-nav > li > a {
+    display: inline-block;
+    background: #0068ff;
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  }
+  .main-menu .navbar-nav > li > a:hover,
+  .main-menu .navbar-nav > li > a:focus {
+    opacity: 0.85;
+    color: #ffffff;
+    text-decoration: none;
   }
 }
 .site-footer {
@@ -703,4 +720,73 @@ body {
 }
 .section-login .lostpassword-link a {
   color: #0068ff;
+}
+
+.section-certificados {
+  background: #f8f9fa;
+  color: #222;
+  padding: 80px 0;
+  position: relative;
+}
+.section-certificados::before, .section-certificados::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #5497e8;
+  z-index: 1;
+}
+.section-certificados::before {
+  top: 0;
+}
+.section-certificados::after {
+  bottom: 0;
+}
+.section-certificados h1 {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  color: #0068ff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+.section-certificados .card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 0;
+  box-shadow: none;
+}
+.section-certificados .card-title {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  color: #223254;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.section-certificados .btn-primary {
+  background: #0068ff;
+  color: #ffffff;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  border: none;
+  border-radius: 0;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+.section-certificados .btn-primary:hover {
+  background: #223254;
+}
+.section-certificados .alert {
+  border-radius: 0;
+}
+@media (max-width: 768px) {
+  .section-certificados .row.g-4 {
+    row-gap: 24px;
+  }
+  .section-certificados .card {
+    margin-bottom: 12px;
+  }
 }
