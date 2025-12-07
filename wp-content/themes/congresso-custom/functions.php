@@ -113,6 +113,48 @@ function congresso_filter_login_url($login_url, $redirect, $force_reauth){
 }
 add_filter('login_url', 'congresso_filter_login_url', 10, 3);
 
+// Ensure core public pages exist: Sobre, Comissões
+function congresso_ensure_core_pages(){
+    $pages = [
+        [ 'title' => 'Sobre', 'slug' => 'sobre' ],
+        [ 'title' => 'Comissões', 'slug' => 'comissoes' ],
+    ];
+    foreach ($pages as $cfg) {
+        $existing = get_page_by_path($cfg['slug']);
+        if (!$existing) {
+            $page_id = wp_insert_post([
+                'post_title'  => $cfg['title'],
+                'post_name'   => $cfg['slug'],
+                'post_status' => 'publish',
+                'post_type'   => 'page',
+            ]);
+            // Assign template
+            if (!is_wp_error($page_id)) {
+                $tpl = $cfg['slug'] === 'sobre' ? 'page-sobre.php' : ($cfg['slug'] === 'comissoes' ? 'page-comissoes.php' : '');
+                if ($tpl) {
+                    update_post_meta($page_id, '_wp_page_template', $tpl);
+                }
+            }
+        }
+    }
+}
+add_action('init', 'congresso_ensure_core_pages');
+
+// Update menu link for "Contato" to scroll to footer
+function congresso_menu_contact_scroll($atts, $item, $args){
+    if (isset($args->theme_location) && $args->theme_location === 'primary') {
+        $title = strtolower(trim($item->title));
+        if (in_array($title, ['contato','contact'])) {
+            // Scroll to footer element id (ensure your footer has id="footer")
+            $atts['href'] = '#footer';
+            // Add smooth scroll behavior via attributes/classes if desired
+            $atts['class'] = isset($atts['class']) ? $atts['class'] . ' js-scroll' : 'js-scroll';
+        }
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'congresso_menu_contact_scroll', 10, 3);
+
 // Ensure rewrite rules include /gerenciamento (one-time flush)
 function congresso_flush_rewrite_for_gerenciamento_once(){
     if (!get_option('congresso_gerenciamento_rewrite_flushed')) {

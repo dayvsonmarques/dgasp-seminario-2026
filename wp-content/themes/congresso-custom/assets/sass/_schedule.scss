@@ -1,3 +1,20 @@
+.section-schedule .row > .col-md-6 {
+  display: flex;
+}
+.section-schedule .event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; // spread title and button
+  width: 100%;
+}
+
+// Ensure equal heights for both boxes even with differing content
+@media (min-width: 768px) {
+  .section-schedule .row > .col-md-6 {
+    align-items: stretch;
+  }
+}
 .section-schedule {
   background: $color-dark-blue;
   background-image: url('assets/img/schedule-half-circle.png');

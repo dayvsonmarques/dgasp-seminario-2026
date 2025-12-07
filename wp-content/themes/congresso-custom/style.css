@@ -69,7 +69,7 @@ body {
 }
 .event-card .card-title {
   font-family: "Montserrat", Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #223254;
   line-height: 1;
@@ -616,6 +616,23 @@ body {
   z-index: 1;
 }
 
+.section-schedule .row > .col-md-6 {
+  display: flex;
+}
+
+.section-schedule .event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .section-schedule .row > .col-md-6 {
+    align-items: stretch;
+  }
+}
 .section-schedule {
   background: #223254;
   background-image: url("assets/img/schedule-half-circle.png");
@@ -771,7 +788,7 @@ body {
 .section-certificados .card-title {
   font-family: "Bebas Neue", Arial, sans-serif;
   color: #223254;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
