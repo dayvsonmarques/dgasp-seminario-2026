@@ -305,6 +305,18 @@ body {
     color: #ffffff;
     text-decoration: none;
   }
+  .main-menu .navbar-nav > li > a.logout-link {
+    background: transparent;
+    color: #223254;
+    padding: 0.25rem 0.5rem;
+    font-weight: 500;
+    opacity: 1;
+  }
+  .main-menu .navbar-nav > li > a.logout-link:hover,
+  .main-menu .navbar-nav > li > a.logout-link:focus {
+    text-decoration: underline;
+    color: #223254;
+  }
 }
 .site-footer {
   background: #222;

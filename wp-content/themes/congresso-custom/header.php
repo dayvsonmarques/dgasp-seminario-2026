@@ -45,6 +45,12 @@
                             },
                             'depth'          => 1,
                         ]);
+
+                        // Add logout link when user is logged in
+                        if (is_user_logged_in()) {
+                            $logout_url = wp_logout_url(home_url('/'));
+                            echo '<ul class="navbar-nav flex-column flex-xl-row ms-xl-3"><li class="menu-item"><a class="logout-link" href="' . esc_url($logout_url) . '">Sair</a></li></ul>';
+                        }
                         ?>
                     </div>
                 </nav>
