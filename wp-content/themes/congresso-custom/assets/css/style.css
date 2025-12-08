@@ -77,6 +77,21 @@ body {
   margin-bottom: 16px;
 }
 
+.title-section {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 5em;
+  color: #000000;
+  line-height: 1.1em;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.title-section span {
+  font-weight: 400;
+  display: inline;
+}
+
 .header-bar {
   width: 100%;
   height: 10px;

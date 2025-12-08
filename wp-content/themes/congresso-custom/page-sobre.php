@@ -9,7 +9,7 @@ get_header();
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <h1 class="mb-4 text-center">Sobre</h1>
+        <h1 class="mb-4 text-center title-section">Sobre</h1>
         <div class="page-content lead">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

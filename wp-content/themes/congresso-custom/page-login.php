@@ -3,7 +3,6 @@
 Template Name: Página de Login
 */
 
-// Redirect early before any output if user is logged in
 if (is_user_logged_in()) {
   if (function_exists('congresso_get_certificados_page_url')) {
     wp_safe_redirect(congresso_get_certificados_page_url());

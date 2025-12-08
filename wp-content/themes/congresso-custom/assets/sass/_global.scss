@@ -40,3 +40,19 @@ body {
     margin-bottom: 16px;
   }
 }
+
+.title-section {
+    font-family: $font-heading;
+    font-size: 5em;
+    color: $color-black;
+    line-height: 1.1em;
+    letter-spacing: 0.02em;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    span {
+        font-weight: 400;
+        display: inline;
+    }
+}
