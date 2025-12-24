@@ -20,13 +20,10 @@ get_header();
       </div>
       <?php
         $current_user = wp_get_current_user();
-        // Meta keys (fallback to strings if constants not defined)
         $meta_user = defined('CERTIFY_META_USER') ? CERTIFY_META_USER : 'certify_user_id';
         $meta_pdf  = defined('CERTIFY_META_PDF') ? CERTIFY_META_PDF  : 'certify_pdf_id';
         $meta_date = defined('CERTIFY_META_DATE') ? CERTIFY_META_DATE : 'certify_issue_date';
 
-        // Query only certificates assigned to the logged-in user.
-        // Some older entries may use a different meta key; include a fallback key.
         $query = new WP_Query([
           'post_type'      => 'certify',
           'post_status'    => 'publish',

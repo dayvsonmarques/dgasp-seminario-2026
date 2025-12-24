@@ -68,14 +68,15 @@
     border-radius: 0;
   }
 
-  // Spacing between cards on small screens
-  @media (max-width: $breakpoint-md) {
-    .row.g-4 {
-      row-gap: 24px;
-    }
+  .row.g-4 {
+    row-gap: 24px;
+  }
 
-    .card {
-      margin-bottom: 12px;
+  .card {
+    margin-bottom: 12px;
+    
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: 0;
     }
   }
 }

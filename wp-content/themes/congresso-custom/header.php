@@ -30,15 +30,12 @@
                 <nav class="main-menu collapse d-none" id="mainMenu">
                     <div class="d-flex flex-column flex-xl-row justify-content-xl-end gap-2 pe-xl-4 pb-3 pb-xl-0">
                         <?php
-                        // Load the primary menu configured in WP admin
                         wp_nav_menu([
-                            // Prefer the specific menu named/slugged "main-menu" if present
                             'menu'           => 'main-menu',
                             'theme_location' => 'primary',
                             'container'      => false,
                             'menu_class'     => 'navbar-nav flex-column flex-xl-row',
                             'fallback_cb'    => function(){
-                                // Fallback: list pages if no menu is set
                                 echo '<ul class="navbar-nav flex-column flex-xl-row">';
                                 wp_list_pages(['title_li' => '']);
                                 echo '</ul>';
@@ -46,7 +43,6 @@
                             'depth'          => 1,
                         ]);
 
-                        // Add logout link when user is logged in
                         if (is_user_logged_in()) {
                             $logout_url = wp_logout_url(home_url('/'));
                             echo '<ul class="navbar-nav flex-column flex-xl-row ms-xl-3"><li class="menu-item"><a class="logout-link" href="' . esc_url($logout_url) . '">Sair</a></li></ul>';

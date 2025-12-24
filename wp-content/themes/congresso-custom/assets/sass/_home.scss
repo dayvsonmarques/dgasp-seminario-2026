@@ -192,18 +192,19 @@
   border: 1px solid $logo-border;
 }
 
-// Mobile adjustments: prevent banner image from being cropped or stretched
-@media (max-width: $breakpoint-lg) {
-  .banner-home {
-    height: auto; // Let container height follow image on smaller screens
-  }
+.banner-home {
+  height: auto;
+}
 
-  .banner-img {
-    height: 100vh; // prioritize visible height
-    object-fit: contain; // show full image without cropping
-    object-position: center; // center image within viewport
-    display: block; // Avoid inline gaps
-    background-color: $banner-bg; // Fill any letterboxing with banner background
+.banner-img {
+  height: 100vh;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background-color: $banner-bg;
+  
+  @media (min-width: $breakpoint-lg) {
+    height: auto;
   }
 }
 
@@ -244,16 +245,17 @@
   }
 }
 
-// Responsive spacing for event cards
-@media (max-width: $breakpoint-md) {
-  .section-about {
-    .event-card {
-      margin-bottom: 24px; // Add space between cards on small screens
+.section-about {
+  .event-card {
+    margin-bottom: 24px;
+    
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: 0;
     }
+  }
 
-    .row.g-4 {
-      row-gap: 24px; // Slightly increase row gap for better breathing room
-    }
+  .row.g-4 {
+    row-gap: 24px;
   }
 }
 

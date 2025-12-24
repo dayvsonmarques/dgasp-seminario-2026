@@ -1,0 +1,93 @@
+.section-about-hero {
+  background: url('assets/img/crosses.jpg') no-repeat, $color-blue;
+  background-size: 100% auto; 
+  padding: 60px 0;
+  position: relative;
+  
+  .about-hero-title {
+    color: $color-white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    
+    @media (min-width: $breakpoint-md) {
+      font-size: 2.5rem;
+    }
+  } 
+}
+
+.section-about-content {
+  background: $color-white;
+  
+  .about-block {
+    margin-bottom: 3rem;
+  }
+  
+  .about-subtitle {
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    color: $color-dark-blue;
+    font-weight: 300;
+    font-size: 1.4rem;
+    
+    .highlight-text {
+      color: $color-blue;
+    }
+    
+    @media (min-width: $breakpoint-md) {
+      font-size: 1.6rem;
+    }
+
+     @media (min-width: $breakpoint-lg) {
+      font-size: 4.2rem;
+    }
+  }
+  
+  .about-description {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-about {
+   
+  }
+  
+  .about-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-blue;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .axis-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .axis-title {
+    font-family: $font-heading;
+    font-size: 2rem;
+    font-weight: 400;
+    color: $color-blue;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+  }
+  
+  .axis-description {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 0;
+  }
+}
+
+.about-footer-bar {
+  background: url('assets/img/bg-about.png') repeat-x, $color-blue;
+  background-size: auto 100%;
+  height: 40px;
+  width: 100%;
+}

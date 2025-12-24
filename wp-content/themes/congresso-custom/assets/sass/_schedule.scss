@@ -9,7 +9,6 @@
   width: 100%;
 }
 
-// Ensure equal heights for both boxes even with differing content
 @media (min-width: 768px) {
   .section-schedule .row > .col-md-6 {
     align-items: stretch;

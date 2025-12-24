@@ -3,6 +3,18 @@
   background-color: #223254 !important;
 }
 
+.bg-blue {
+  background-color: #0068ff !important;
+}
+
+.color-white {
+  color: #ffffff !important;
+}
+
+.color-blue {
+  color: #0068ff !important;
+}
+
 body {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 400;
@@ -22,10 +34,12 @@ h6 {
 
 .bold {
   font-weight: 700 !important;
+  opacity: 1;
 }
 
 .light {
-  font-weight: 300 !important;
+  font-weight: 400 !important;
+  opacity: 0.7;
 }
 
 .ff-heading {
@@ -90,6 +104,32 @@ body {
 .title-section span {
   font-weight: 400;
   display: inline;
+}
+
+.page-title {
+  font-weight: 300;
+  font-size: 6em;
+  font-family: "Bebas Neue", Arial, sans-serif;
+}
+
+.btn-default-custom {
+  background: #0068ff;
+  color: #ffffff;
+  padding: 8px 80px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+.btn-default-custom:hover {
+  opacity: 0.7;
+}
+
+.fw300 {
+  font-weight: 300 !important;
 }
 
 .header-bar {
@@ -215,7 +255,7 @@ body {
   display: block;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .main-menu.collapse:not(.show) {
     display: none !important;
   }
@@ -547,18 +587,23 @@ body {
   border: 1px solid #eaeaea;
 }
 
-@media (max-width: 992px) {
-  .banner-home {
+.banner-home {
+  height: auto;
+}
+
+.banner-img {
+  height: 100vh;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background-color: #fff;
+}
+@media (min-width: 992px) {
+  .banner-img {
     height: auto;
   }
-  .banner-img {
-    height: 100vh;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-    background-color: #fff;
-  }
 }
+
 @media (min-width: 992px) {
   .section-about .container {
     flex-direction: row;
@@ -585,14 +630,18 @@ body {
     font-size: 1.3rem;
   }
 }
-@media (max-width: 768px) {
+.section-about .event-card {
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
   .section-about .event-card {
-    margin-bottom: 24px;
-  }
-  .section-about .row.g-4 {
-    row-gap: 24px;
+    margin-bottom: 0;
   }
 }
+.section-about .row.g-4 {
+  row-gap: 24px;
+}
+
 .section-participation {
   padding: 120px 0;
 }
@@ -772,11 +821,98 @@ body {
 .section-certificados .alert {
   border-radius: 0;
 }
-@media (max-width: 768px) {
-  .section-certificados .row.g-4 {
-    row-gap: 24px;
-  }
+.section-certificados .row.g-4 {
+  row-gap: 24px;
+}
+.section-certificados .card {
+  margin-bottom: 12px;
+}
+@media (min-width: 768px) {
   .section-certificados .card {
-    margin-bottom: 12px;
+    margin-bottom: 0;
   }
+}
+
+.section-about-hero {
+  background: url("assets/img/crosses.jpg") no-repeat, #0068ff;
+  background-size: 100% auto;
+  padding: 60px 0;
+  position: relative;
+}
+.section-about-hero .about-hero-title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .section-about-hero .about-hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+.section-about-content {
+  background: #ffffff;
+}
+.section-about-content .about-block {
+  margin-bottom: 3rem;
+}
+.section-about-content .about-subtitle {
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  color: #223254;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+.section-about-content .about-subtitle .highlight-text {
+  color: #0068ff;
+}
+@media (min-width: 768px) {
+  .section-about-content .about-subtitle {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 992px) {
+  .section-about-content .about-subtitle {
+    font-size: 4.2rem;
+  }
+}
+.section-about-content .about-description {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.section-about-content .about-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0068ff;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  letter-spacing: 0.05em;
+}
+.section-about-content .axis-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+}
+.section-about-content .axis-title {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #0068ff;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+.section-about-content .axis-description {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+.about-footer-bar {
+  background: url("assets/img/bg-about.png") repeat-x, #0068ff;
+  background-size: auto 100%;
+  height: 40px;
+  width: 100%;
 }

@@ -22,8 +22,15 @@ cd "$SASS_DIR" || exit 1
 echo "🚀 Iniciando Sass em modo watch..."
 echo ""
 
-# Usa npx sass em modo watch e processa a saída
-npx sass --watch style.scss:../css/style.css --no-source-map 2>&1 | while IFS= read -r line; do
+# Verifica se o sass está instalado
+if ! command -v sass &> /dev/null; then
+    echo "❌ Erro: sass não encontrado!"
+    echo "📦 Instale com: sudo npm install -g sass"
+    exit 1
+fi
+
+# Usa sass em modo watch e processa a saída
+sass --watch style.scss:../css/style.css --no-source-map 2>&1 | while IFS= read -r line; do
     echo "$line"
     
     # Quando detectar compilação bem-sucedida, copia o arquivo

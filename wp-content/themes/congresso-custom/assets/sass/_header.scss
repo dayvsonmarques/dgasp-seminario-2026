@@ -133,12 +133,10 @@
     display: flex !important;
   }
 
-  // Normalize link appearance across desktop and mobile
   a {
-    text-decoration: none; // remove underline
+    text-decoration: none;
   }
 
-  // Normalize WP nav markup
   .navbar-nav {
     padding-left: 0;
     margin: 0;
@@ -149,28 +147,25 @@
   }
 }
 
-// Mobile: hide the default collapsed menu content to avoid duplication
-@media (max-width: $breakpoint-lg) {
+@media (max-width: #{$breakpoint-lg - 1px}) {
   .main-menu.collapse:not(.show) {
     display: none !important;
   }
 
-  // Extra safeguard: hide any Bootstrap navbar-collapse when not shown
   .navbar-collapse:not(.show) {
     display: none !important;
   }
 
-  // Prevent blue flash on mobile: neutralize default button styling
   .main-menu a {
     background: transparent !important;
     color: $color-black !important;
     border-radius: 0;
-    padding: 2vh 3vh; // spacing proportional to viewport height
-    text-decoration: none; // ensure no underline
+    padding: 2vh 3vh;
+    text-decoration: none;
     transition: color 0.2s ease;
     letter-spacing: 0.02em;
-    font-size: clamp(1.4rem, 5vh, 3rem); // larger, responsive size
-    text-align: center; // centered text on mobile
+    font-size: clamp(1.4rem, 5vh, 3rem);
+    text-align: center;
   }
 
   .main-menu a:hover {
@@ -179,9 +174,8 @@
     background: transparent !important;
   }
 
-  // Smooth overlay appearance
   .main-menu.collapse {
-    transition: none; // disable Bootstrap height transition to avoid flicker
+    transition: none;
   }
 
   .main-menu.collapse.show {
@@ -208,7 +202,6 @@
   align-items: center;
   justify-content: center;
 
-  // Center the menu list itself
   .navbar-nav,
   .d-flex {
     display: flex !important;
@@ -237,24 +230,9 @@
   }
 }
 
-// Desktop button style can be applied via menu item classes if needed
-
 @media (min-width: $breakpoint-xl) {
-  // .header-logo {
-  //   max-height: 400px;
-
-  //   &--main {
-  //     max-width: 300px;
-  //   }
-
-  //   &--gov {
-  //     max-width: 280px;
-  //   }
-  // }
-
   .main-menu {
     display: block !important;
-    // Desktop item styling: blue background buttons with white text
     .navbar-nav {
       display: flex;
       gap: 12px;
@@ -282,7 +260,6 @@
       text-decoration: none;
     }
 
-    // Simple style for logout link (no button background)
     .navbar-nav > li > a.logout-link {
       background: transparent;
       color: $color-dark-blue;
