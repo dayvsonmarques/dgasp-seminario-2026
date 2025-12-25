@@ -111,6 +111,7 @@ get_header();
   </div>
 </section>
 
-<div class="about-footer-bar"></div>
+<div class="bg-crosses">
+</div>
 
 <?php get_footer(); ?>

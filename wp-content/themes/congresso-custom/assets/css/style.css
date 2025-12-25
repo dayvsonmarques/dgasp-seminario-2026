@@ -833,13 +833,13 @@ body {
   }
 }
 
-.section-about-hero {
+.section-about-hero, .bg-crosses {
   background: url("assets/img/crosses.jpg") no-repeat, #0068ff;
   background-size: 100% auto;
   padding: 60px 0;
   position: relative;
 }
-.section-about-hero .about-hero-title {
+.section-about-hero .about-hero-title, .bg-crosses .about-hero-title {
   color: #ffffff;
   font-size: 1.8rem;
   font-weight: 700;
@@ -847,7 +847,7 @@ body {
   margin: 0;
 }
 @media (min-width: 768px) {
-  .section-about-hero .about-hero-title {
+  .section-about-hero .about-hero-title, .bg-crosses .about-hero-title {
     font-size: 2.5rem;
   }
 }
@@ -910,9 +910,7 @@ body {
   margin-bottom: 0;
 }
 
-.about-footer-bar {
-  background: url("assets/img/bg-about.png") repeat-x, #0068ff;
-  background-size: auto 100%;
-  height: 40px;
+.bg-crosses {
+  height: 25vh;
   width: 100%;
 }
