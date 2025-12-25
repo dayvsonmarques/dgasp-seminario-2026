@@ -863,14 +863,13 @@ body {
   margin-bottom: 1.5rem;
   color: #223254;
   font-weight: 300;
-  font-size: 1.4rem;
 }
 .section-about-content .about-subtitle .highlight-text {
   color: #0068ff;
 }
-@media (min-width: 768px) {
+@media (min-width: 0) {
   .section-about-content .about-subtitle {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 992px) {
@@ -907,6 +906,9 @@ body {
   line-height: 1.7;
   color: #333;
   text-align: justify;
+  margin-bottom: 0;
+}
+.section-about-content .axis-description p {
   margin-bottom: 0;
 }
 

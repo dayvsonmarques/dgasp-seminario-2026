@@ -66,45 +66,34 @@ get_header();
     <div class="row mt-5 mb-5">
       <div class="col-12 text-center">
         <h2 class="display-4 color-blue">EIXOS TEMÁTICOS</h2>
-
       </div>
     </div>
+    
     <div class="about-block">
+      <?php
+      $eixos = new WP_Query([
+        'post_type' => 'eixo_tematico',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order title',
+        'order' => 'ASC'
+      ]);
 
-      <div class="axis-item">
-        <h3 class="axis-title">EIXO 1 — EDUCAÇÃO EM SAÚDE, EDUCAÇÃO PERMANENTE E FORMAÇÃO PROFISSIONAL</h3>
-        <p class="axis-description">
-          Experiências, metodologias e práticas voltadas para a capacitação e qualificação de profissionais de saúde que atuam no sistema prisional de Pernambuco, incluindo ações de educação permanente, desenvolvimento de competências, inovação pedagógica e fortalecimento de equipes multiprofissionais.
-        </p>
-      </div>
-
-      <div class="axis-item">
-        <h3 class="axis-title">EIXO 2 — ATENÇÃO INTEGRAL À SAÚDE DA POPULAÇÃO PRIVADA DE LIBERDADE</h3>
-        <p class="axis-description">
-          Relatos de práticas e avanços nas linhas de cuidado estratégicas (saúde mental, doenças crônicas, IST/HIV, tuberculose, saúde bucal, saúde materno-infantil, entre outras), com foco na integralidade do cuidado, na humanização e no atendimento às necessidades de saúde.
-        </p>
-      </div>
-
-      <div class="axis-item">
-        <h3 class="axis-title">EIXO 3 — DETERMINANTES SOCIAIS DA SAÚDE, INIQUIDADES ESTRUTURAIS E VULNERABILIDADES NO CÁRCERE</h3>
-        <p class="axis-description">
-          Discussão de iniciativas que abordem racismo estrutural, desigualdades de gênero e de sexualidade, condições socioeconômicas e outros fatores que impactam a saúde no ambiente prisional, buscando estratégias para reduzir iniquidades e promover a equidade em saúde.
-        </p>
-      </div>
-
-      <div class="axis-item">
-        <h3 class="axis-title">EIXO 4 — INTEGRAÇÃO DA REDE DE CUIDADO E ARTICULAÇÃO INTERSETORIAL</h3>
-        <p class="axis-description">
-          Experiências que evidenciem a integração entre diferentes níveis de atenção, gestão municipal, regional e estadual, bem como a articulação com políticas de assistência social, educação, justiça e direitos humanos, visando ao fortalecimento da rede de cuidado.
-        </p>
-      </div>
-
-      <div class="axis-item">
-        <h3 class="axis-title">EIXO 5 — VIGILÂNCIA, MONITORAMENTO E PLANEJAMENTO EM SAÚDE PRISIONAL</h3>
-        <p class="axis-description">
-          Apresentação de práticas de vigilância em saúde, sistemas de informação, monitoramento epidemiológico, planejamento e avaliação de políticas e serviços, com foco em indicadores de saúde, prevenção e promoção da qualidade de vida no sistema prisional.
-        </p>
-      </div>
+      if ($eixos->have_posts()) :
+        while ($eixos->have_posts()) : $eixos->the_post();
+      ?>
+        <div class="axis-item">
+          <h3 class="axis-title"><?php the_title(); ?></h3>
+          <div class="axis-description">
+            <?php the_content(); ?>
+          </div>
+        </div>
+      <?php
+        endwhile;
+        wp_reset_postdata();
+      else :
+      ?>
+        <p class="text-center">Nenhum eixo temático cadastrado.</p>
+      <?php endif; ?>
     </div>
   </div>
   </div>

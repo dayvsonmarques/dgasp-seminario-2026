@@ -64,6 +64,42 @@ function congresso_register_certificados_cpt() {
 }
 add_action('init', 'congresso_register_certificados_cpt');
 
+function congresso_register_eixos_tematicos_cpt() {
+    $labels = [
+        'name'               => __('Eixos Temáticos', 'congresso-custom'),
+        'singular_name'      => __('Eixo Temático', 'congresso-custom'),
+        'menu_name'          => __('Eixos Temáticos', 'congresso-custom'),
+        'name_admin_bar'     => __('Eixo Temático', 'congresso-custom'),
+        'add_new'            => __('Adicionar novo', 'congresso-custom'),
+        'add_new_item'       => __('Adicionar novo Eixo Temático', 'congresso-custom'),
+        'new_item'           => __('Novo Eixo Temático', 'congresso-custom'),
+        'edit_item'          => __('Editar Eixo Temático', 'congresso-custom'),
+        'view_item'          => __('Ver Eixo Temático', 'congresso-custom'),
+        'all_items'          => __('Todos os Eixos', 'congresso-custom'),
+        'search_items'       => __('Buscar Eixos', 'congresso-custom'),
+        'not_found'          => __('Nenhum Eixo encontrado', 'congresso-custom'),
+        'not_found_in_trash' => __('Nenhum Eixo na lixeira', 'congresso-custom'),
+    ];
+
+    $args = [
+        'labels'             => $labels,
+        'public'             => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'menu_position'      => 21,
+        'menu_icon'          => 'dashicons-editor-ul',
+        'show_in_rest'       => true,
+        'supports'           => ['title', 'editor', 'page-attributes'],
+        'has_archive'        => false,
+        'publicly_queryable' => false,
+        'capability_type'    => 'post',
+        'hierarchical'       => false,
+    ];
+
+    register_post_type('eixo_tematico', $args);
+}
+add_action('init', 'congresso_register_eixos_tematicos_cpt');
+
 function congresso_certify_flush_once(){
     if (!get_option('congresso_certify_rewrite_flushed')) {
         flush_rewrite_rules();
@@ -71,6 +107,14 @@ function congresso_certify_flush_once(){
     }
 }
 add_action('init', 'congresso_certify_flush_once', 15);
+
+function congresso_eixos_flush_once(){
+    if (!get_option('congresso_eixos_rewrite_flushed')) {
+        flush_rewrite_rules();
+        update_option('congresso_eixos_rewrite_flushed', 1);
+    }
+}
+add_action('init', 'congresso_eixos_flush_once', 15);
 
 if (!defined('CERTIFY_META_USER')) define('CERTIFY_META_USER', 'certify_user_id');
 if (!defined('CERTIFY_META_PDF'))  define('CERTIFY_META_PDF',  'certify_pdf_id');
