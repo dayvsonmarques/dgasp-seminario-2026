@@ -31,11 +31,27 @@
 }
 
 .border-start-blue {
-  border-left-color: $color-blue !important;
-  border-left-width: 3px !important;
+  border-left-color: transparent !important;
+  border-left-width: 0 !important;
+  
+  @media (min-width: $breakpoint-lg) {
+    border-left-color: $color-blue !important;
+    border-left-width: 3px !important;
+  }
 }
 
 .footer-contact .border-start-blue {
-  padding-top: 24px; // adds space above to extend border length
-  padding-bottom: 24px; // adds space below to extend border length
+  padding-top: 24px;
+  padding-bottom: 24px;
+  
+  @media (min-width: $breakpoint-xs) {
+    border-left-color: $color-dark-blue !important;
+    border-left-width: 0 !important;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    border-left-color: $color-blue !important;
+    border-left-width: 3px !important;
+    padding-left: 3rem;
+  }
 }

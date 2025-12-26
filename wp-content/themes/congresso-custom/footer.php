@@ -20,8 +20,8 @@
                 </nav>
             </div>
             <div class="col-12 col-lg-4 pt-4">
-                <div class="footer-contact fs-6 p-4">
-                    <div class="border-start border-start-blue ps-5">
+                <div class="footer-contact fs-6">
+                    <div class="border-start border-start-blue">
                         <div class="fw-bold h1 pb-3 ff-heading">CONTATO</div>
                         <p class="h5 light text-nowrap pb-2">Email: loremipsum@gmail.com</p>
                         <p class="h5 light text-nowrap">Telefone: (81) xxxxx - xxxx

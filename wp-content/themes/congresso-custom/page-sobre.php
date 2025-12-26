@@ -22,7 +22,7 @@ get_header();
 <section class="section-about-content py-5">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-xl-6">
         <h2 class="about-subtitle color-blue">
           <span class="highlight-text bold">III SEMINÁRIO</span> ESTADUAL<br>
           DE <span class="highlight-text bold">ATENÇÃO À SAÚDE<br>
@@ -30,8 +30,8 @@ get_header();
         </h2>
 
       </div>
-      <div class="col-12 col-lg-6">
-        <p class="about-description h4 fw300 text-left">
+      <div class="col-12 col-xl-6">
+        <p class="about-description fw300 text-left">
           O III Seminário Estadual de Atenção à Saúde Prisional de Pernambuco, reúne profissionais de saúde, gestores, diretores de unidades prisionais, equipes de segurança e representantes do sistema de justiça. O encontro busca fortalecer o debate, promover a troca de experiências e integrar saberes para qualificar a atenção à saúde da população privada de liberdade (PPL) em Pernambuco.
         </p>
       </div>
@@ -57,7 +57,7 @@ get_header();
     </div>
     <div class="row">
       <div class="col-12">
-        <p class="about-description text-left h5">
+        <p class="about-description text-left">
           A III Mostra Estadual de Experiências na Saúde Prisional acontece junto ao seminário, com o objetivo de reconhecer, valorizar e divulgar práticas exitosas das unidades prisionais, municípios e Gerências Regionais. Mais que uma mostra, é um espaço de compartilhamento de práticas inovadoras que inspiram soluções e fortalecem a equidade e o cuidado integral no SUS.
         </p>
       </div>
