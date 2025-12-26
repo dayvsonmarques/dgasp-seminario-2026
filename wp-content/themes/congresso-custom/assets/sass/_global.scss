@@ -11,7 +11,7 @@ p {
 
 .section-title {
   font-family: $font-heading;
-  font-size: 4em;
+  font-size: 6rem;
   color: $color-white;
   line-height: 1.1em;
   letter-spacing: 0.02em;
@@ -35,9 +35,9 @@ p {
   min-height: auto;
 
   .card-title {
-    font-family: $font-stack;
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    font-weight: 400;
     color: $color-dark-blue;
     line-height: 1;
     letter-spacing: 0.02em;
@@ -67,20 +67,37 @@ p {
   font-family: $font-heading;
 }
 
-.btn-default-custom {
+.btn-main {
   background: $color-blue;
   color: $color-white;
-  padding: 8px 80px;
+  font-family: $font-stack;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   border: none;
   border-radius: 0;
+  padding: 12px 0;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.02em;
   text-decoration: none;
   display: inline-block;
-  transition: opacity 0.3s ease;
+  transition: background 0.3s ease;
 
   &:hover {
+    background: $color-dark-blue;
+    color: $color-white;
+  }
+}
+
+.btn-default-custom {
+  @extend .btn-main;
+  padding: 8px 80px;
+  font-size: 1.4rem;
+  width: auto;
+  
+  &:hover {
     opacity: 0.7;
+    background: $color-blue;
   }
 }
 

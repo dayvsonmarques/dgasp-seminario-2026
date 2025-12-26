@@ -5,7 +5,7 @@ Template Name: Sobre
 get_header();
 ?>
 
-<section class="section-about-hero">
+<section class="section-about-hero mb-5">
   <div class="container">
     <div class="row">
       <div class="col-12 ">

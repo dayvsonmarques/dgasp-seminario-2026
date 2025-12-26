@@ -30,43 +30,10 @@
     align-items: stretch;
   }
 
-  .event-card {
-    p {
-      font-size: 1.2rem;
-      color: $color-dark-blue;
-      margin-bottom: 32px;
-    }
-  }
-
-  .card-title {
-    font-size: 1.8rem;
-    color: $color-blue;
-
-    strong,
-    .highlight {
-      color: $color-dark-blue;
-    }
-  }
-
-  .btn-saiba,
-  .btn-learn,
-  .btn-topics {
-    background: $color-blue;
-    color: $color-white;
-    font-family: $font-stack;
-    font-weight: 700;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 0;
-    padding: 12px 0;
-    width: 100%;
-    text-align: center;
-    letter-spacing: 0.02em;
-    transition: background 0.3s;
-
-    &:hover {
-      background: $color-dark-blue;
-    }
+  .event-card p {
+    font-size: 1.2rem;
+    color: $color-dark-blue;
+    margin-bottom: 32px;
   }
 
   .row {

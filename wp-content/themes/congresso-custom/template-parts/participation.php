@@ -2,7 +2,7 @@
     <div class="container text-center">
         <h2 class="section-title text-blue mb-1">
             <span class="bold">PARTICIPE</span>
-            <span class="light">DO </span>
+            <span class="">DO</span>
             <span class="bold">SEMINÁRIO</span>
         </h2>
         <p class="text-dark-blue h4">Inscreva-se e faça parte dessa jornada de saúde, integração e cuidado.</p>
