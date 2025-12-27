@@ -147,7 +147,7 @@
   }
 }
 
-@media (max-width: #{$breakpoint-lg - 1px}) {
+@media (max-width: #{$breakpoint-xl - 1px}) {
   .main-menu.collapse:not(.show) {
     display: none !important;
   }

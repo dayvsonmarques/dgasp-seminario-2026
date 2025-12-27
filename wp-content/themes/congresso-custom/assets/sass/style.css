@@ -278,7 +278,7 @@ p {
   display: block;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .main-menu.collapse:not(.show) {
     display: none !important;
   }

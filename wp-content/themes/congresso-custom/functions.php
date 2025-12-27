@@ -225,11 +225,19 @@ function congresso_menu_login_link($atts, $item, $args){
 add_filter('nav_menu_link_attributes', 'congresso_menu_login_link', 10, 3);
 
 function congresso_login_redirect($redirect_to, $request, $user){
-    if (is_wp_error($user) || !$user) { return $redirect_to; }
-
-    if (user_can($user, 'administrator') || user_can($user, 'editor')) {
-        return !empty($redirect_to) ? $redirect_to : admin_url();
+    if (is_wp_error($user) || !$user) { 
+        return $redirect_to; 
     }
+
+    // Verifica se o usuário é Admin ou Editor
+    $is_admin_or_editor = user_can($user, 'administrator') || user_can($user, 'editor');
+    
+    if ($is_admin_or_editor) {
+        // Admin/Editor sempre vai para o painel administrativo
+        return admin_url();
+    }
+    
+    // Todos os outros usuários vão para a página de Certificados
     return congresso_get_certificados_page_url();
 }
 add_filter('login_redirect', 'congresso_login_redirect', 10, 3);
