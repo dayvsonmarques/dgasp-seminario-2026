@@ -358,3 +358,39 @@ function congresso_block_wp_login_for_logged_in(){
     }
 }
 add_action('login_init', 'congresso_block_wp_login_for_logged_in');
+
+/**
+ * Customizer: Informações de Contato do Footer
+ */
+function congresso_customizer_footer_contact($wp_customize) {
+    // Seção
+    $wp_customize->add_section('congresso_footer_contact', [
+        'title'    => __('Contato do Footer', 'congresso-custom'),
+        'priority' => 160,
+    ]);
+
+    // Campo: E-mail
+    $wp_customize->add_setting('congresso_footer_email', [
+        'default'           => 'loremipsum@gmail.com',
+        'sanitize_callback' => 'sanitize_email',
+        'transport'         => 'refresh',
+    ]);
+    $wp_customize->add_control('congresso_footer_email', [
+        'label'   => __('E-mail de contato', 'congresso-custom'),
+        'section' => 'congresso_footer_contact',
+        'type'    => 'email',
+    ]);
+
+    // Campo: Telefone
+    $wp_customize->add_setting('congresso_footer_phone', [
+        'default'           => '(81) xxxxx - xxxx',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport'         => 'refresh',
+    ]);
+    $wp_customize->add_control('congresso_footer_phone', [
+        'label'   => __('Telefone de contato', 'congresso-custom'),
+        'section' => 'congresso_footer_contact',
+        'type'    => 'text',
+    ]);
+}
+add_action('customize_register', 'congresso_customizer_footer_contact');

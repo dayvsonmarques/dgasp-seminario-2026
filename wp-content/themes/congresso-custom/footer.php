@@ -23,8 +23,8 @@
                 <div class="footer-contact fs-6">
                     <div class="border-start border-start-blue">
                         <div class="fw-bold h1 pb-3 ff-heading">CONTATO</div>
-                        <p class="h5 light text-nowrap pb-2">Email: loremipsum@gmail.com</p>
-                        <p class="h5 light text-nowrap">Telefone: (81) xxxxx - xxxx
+                        <p class="h5 light text-nowrap pb-2">Email: <?php echo esc_html(get_theme_mod('congresso_footer_email', 'loremipsum@gmail.com')); ?></p>
+                        <p class="h5 light text-nowrap">Telefone: <?php echo esc_html(get_theme_mod('congresso_footer_phone', '(81) xxxxx - xxxx')); ?>
                     </div>
                 </div>
             </div>
