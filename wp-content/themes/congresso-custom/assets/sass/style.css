@@ -405,11 +405,11 @@ p {
   }
 }
 .site-footer {
-  background: #222;
-  color: #fff;
+  background: #223254;
+  color: #ffffff;
 }
 .site-footer a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -538,8 +538,8 @@ p {
 }
 
 .banner {
-  background: #fff;
-  color: #fff;
+  background: #ffffff;
+  color: #ffffff;
 }
 .banner__container {
   position: absolute;
@@ -600,11 +600,11 @@ p {
 
 .presentation {
   background: #f8f9fa;
-  color: #222;
+  color: #223254;
 }
 
 .logos {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #eaeaea;
 }
 
@@ -792,7 +792,7 @@ p {
 
 .section-certificados {
   background: #f8f9fa;
-  color: #222;
+  color: #223254;
   padding: 80px 0;
   position: relative;
 }
@@ -819,7 +819,7 @@ p {
   margin-bottom: 24px;
 }
 .section-certificados .card {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #eaeaea;
   border-radius: 0;
   box-shadow: none;
@@ -940,7 +940,7 @@ p {
 .section-about-content .axis-description {
   font-size: 1.25rem;
   line-height: 1.7;
-  color: #333;
+  color: #333333;
   text-align: justify;
   margin-bottom: 0;
 }

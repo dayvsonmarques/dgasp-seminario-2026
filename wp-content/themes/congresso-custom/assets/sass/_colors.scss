@@ -1,13 +1,18 @@
-$banner-bg: #fff;
-$banner-text: #fff;
-$logo-bg: #fff;
-$logo-border: #eaeaea;
-
+// Core palette
 $color-dark-blue: #223254;
 $color-blue: #0068ff;
 $color-light-blue: #5497e8;
 $color-white: #ffffff;
 $color-black: #000000;
+$color-gray-dark: #333333;
+$color-gray-border: #eaeaea;
+$color-gray-input: #cccccc;
+
+// Semantic aliases
+$banner-bg: $color-white;
+$banner-text: $color-white;
+$logo-bg: $color-white;
+$logo-border: $color-gray-border;
 
 .bg-dark-blue {
     background-color: $color-dark-blue !important;

@@ -26,7 +26,7 @@ p {
 
 .event-card {
   background: $color-white;
-  box-shadow: 0 2px 16px rgba(34, 50, 84, 0.08);
+  box-shadow: 0 2px 16px rgba($color-dark-blue, 0.08);
   border-radius: 0;
   padding: 20px;
   display: flex;
