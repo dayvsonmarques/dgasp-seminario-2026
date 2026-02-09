@@ -164,11 +164,11 @@
 }
 
 .banner-img {
-  height: 100vh;
-  object-fit: contain;
-  object-position: center;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
   display: block;
-  background-color: $banner-bg;
   
   @media (min-width: $breakpoint-lg) {
     height: auto;

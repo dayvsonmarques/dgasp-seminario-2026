@@ -24,6 +24,14 @@
 
   padding: 10em 0;
 
+  .section-title {
+    font-size: 2.5rem;
+    
+    @media (min-width: $breakpoint-lg) {
+      font-size: 6rem;
+    }
+  }
+
   .container,
   .container-fluid {
     display: flex;
