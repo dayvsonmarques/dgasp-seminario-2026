@@ -247,7 +247,8 @@ function congresso_menu_login_title($title, $item, $args){
         $normalized = strtolower(trim(strip_tags($title)));
         if (in_array($normalized, ['login','entrar'])) {
             if (is_user_logged_in()) {
-                return 'Certificados';
+                $label = get_theme_mod('congresso_menu_certificados_label', 'Certificados');
+                return $label ?: 'Certificados';
             }
         }
     }
@@ -662,3 +663,27 @@ function congresso_customizer_footer_contact($wp_customize) {
     ]);
 }
 add_action('customize_register', 'congresso_customizer_footer_contact');
+
+/**
+ * Customizer: Configurações do Menu de Navegação
+ */
+function congresso_customizer_menu_settings($wp_customize) {
+    $wp_customize->add_section('congresso_menu_settings', [
+        'title'    => __('Menu — Navegação', 'congresso-custom'),
+        'priority' => 155,
+    ]);
+
+    // Label do item "Certificados" (visível apenas para usuários logados)
+    $wp_customize->add_setting('congresso_menu_certificados_label', [
+        'default'           => 'Certificados',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport'         => 'refresh',
+    ]);
+    $wp_customize->add_control('congresso_menu_certificados_label', [
+        'label'       => __('Label do item "Certificados" no menu', 'congresso-custom'),
+        'description' => __('Texto exibido no menu de navegação para usuários logados (substitui o item Login/Entrar).', 'congresso-custom'),
+        'section'     => 'congresso_menu_settings',
+        'type'        => 'text',
+    ]);
+}
+add_action('customize_register', 'congresso_customizer_menu_settings');
