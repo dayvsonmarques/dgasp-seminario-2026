@@ -1,4 +1,84 @@
 <?php
+// ═══════════════════════════════════════════════════════════════════
+// Desabilitar comentários — completamente e em todas as frentes
+// ═══════════════════════════════════════════════════════════════════
+
+// 1. Remove suporte a comentários e trackbacks de todos os post types
+function congresso_disable_comments_support() {
+    foreach (get_post_types() as $post_type) {
+        if (post_type_supports($post_type, 'comments')) {
+            remove_post_type_support($post_type, 'comments');
+            remove_post_type_support($post_type, 'trackbacks');
+        }
+    }
+}
+add_action('admin_init', 'congresso_disable_comments_support');
+
+// 2. Fecha comentários em todos os posts existentes (filter em tempo real)
+add_filter('comments_open',    '__return_false', 20, 2);
+add_filter('pings_open',       '__return_false', 20, 2);
+
+// 3. Oculta contagem de comentários existentes no front-end
+add_filter('comments_array',   '__return_empty_array', 10, 2);
+
+// 4. Remove widgets de comentários recentes do painel
+function congresso_disable_comments_dashboard() {
+    remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+}
+add_action('admin_init', 'congresso_disable_comments_dashboard');
+
+// 5. Remove itens de menu de comentários no painel admin
+function congresso_disable_comments_admin_menu() {
+    remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'congresso_disable_comments_admin_menu');
+
+// 6. Redireciona tentativas de acesso direto à tela de comentários
+function congresso_disable_comments_admin_redirect() {
+    global $pagenow;
+    if ($pagenow === 'edit-comments.php') {
+        wp_safe_redirect(admin_url());
+        exit;
+    }
+}
+add_action('admin_init', 'congresso_disable_comments_admin_redirect');
+
+// 7. Remove link "Comentários" do menu de administração de posts
+function congresso_disable_comments_toolbar($wp_admin_bar) {
+    $wp_admin_bar->remove_node('comments');
+}
+add_action('admin_bar_menu', 'congresso_disable_comments_toolbar', 999);
+
+// 8. Remove rewrite rules de feed de comentários
+function congresso_disable_comment_feeds() {
+    if (is_comment_feed()) {
+        wp_die(__('Comentários estão desabilitados neste site.', 'congresso-custom'), '', ['response' => 403]);
+    }
+}
+add_action('template_redirect', 'congresso_disable_comment_feeds');
+
+// 9. Bloqueia requisição POST direta ao wp-comments-post.php
+function congresso_block_comment_post() {
+    if (
+        isset($_SERVER['REQUEST_METHOD']) &&
+        $_SERVER['REQUEST_METHOD'] === 'POST' &&
+        isset($_SERVER['REQUEST_URI']) &&
+        strpos($_SERVER['REQUEST_URI'], 'wp-comments-post.php') !== false
+    ) {
+        wp_die(__('Comentários estão desabilitados.', 'congresso-custom'), '', ['response' => 403]);
+    }
+}
+add_action('init', 'congresso_block_comment_post');
+
+// 10. Remove campos de comentários do REST API
+add_filter('rest_endpoints', function($endpoints) {
+    if (isset($endpoints['/wp/v2/comments']))         unset($endpoints['/wp/v2/comments']);
+    if (isset($endpoints['/wp/v2/comments/(?P<id>[\d]+)'])) unset($endpoints['/wp/v2/comments/(?P<id>[\d]+)']);
+    return $endpoints;
+});
+
+// ════════════════════════════════════════════════════════════════════
+
 function congresso_custom_setup() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
