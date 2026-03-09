@@ -55,6 +55,19 @@ check-server.php             ← Verificador de requisitos do servidor
 - Barras decorativas no header e footer
 - Página 404 customizada
 
+### Autenticação & Controle de Acesso
+- Fluxo de login customizado via rota `/gerenciamento/`
+- Redirecionamento pós-login: administradores → painel admin; demais → Certificados
+- Bloqueio de acesso ao painel para usuários sem permissão de admin/editor
+- Bloqueio de acesso ao `wp-login.php` para usuários já autenticados
+- Página de certificados protegida — redireciona para login se não autenticado
+
+### Menu de Navegação
+- Item "Login/Entrar" transforma-se em "Certificados" para usuários logados
+- Label do item Certificados editável via **Aparência → Personalizar → Menu — Navegação**
+- Link "Sair" removido do menu
+- Item "Contato" com scroll suave para o footer (`#footer`)
+
 ### CPTs (Custom Post Types)
 - **Certificados** (`certify`) — com meta boxes para usuário, PDF e data de emissão
 - **Eixos Temáticos** (`eixo_tematico`) — para organização de conteúdo
