@@ -1000,7 +1000,7 @@ p {
 .boas-vindas-text,
 .boas-vindas-content p {
   font-family: "Montserrat", Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: #333333;
   line-height: 1.75;
@@ -1033,7 +1033,6 @@ p {
 .boas-vindas-bottom {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 2px solid rgba(34, 50, 84, 0.15);
 }
 
 .speaker-block {
@@ -1050,11 +1049,12 @@ p {
 
 .speaker-role {
   font-family: "Montserrat", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 400;
   color: #555555;
   line-height: 1.55;
   margin-bottom: 0;
+  font-style: italic;
 }
 
 /* Programação Completa section */

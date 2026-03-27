@@ -19,7 +19,7 @@ get_header();
     <h2 class="boas-vindas-title">BOAS VINDAS</h2>
 
     <div class="row">
-      <div class="col-12 col-lg-8">
+      <div class="col-12">
         <div class="boas-vindas-content">
           <?php the_content(); ?>
         </div>
@@ -29,18 +29,21 @@ get_header();
     <div class="row boas-vindas-bottom">
       <div class="col-12">
         <h3 class="boas-vindas-encontrara-title">AQUI, VOCÊ ENCONTRARÁ:</h3>
-        <ul class="boas-vindas-list">
+        <ul class="boas-vindas-list bold">
           <li>Programação atualizada</li>
-          <li>Informações para submissão de trabalhos e divulgação dos aprovados</li>
+          <li>Informações sobre inscrições</li>
+          <li>Orientação para submissão de trabalhos e divulgação dos aprovados</li>
           <li>Informações gerais sobre o evento</li>
-          <li>Fale conosco e muito mais!</li>
         </ul>
+        <div class="boas-vindas-content">
+          <p>Participe, inscreva-se e acompanhe. Este espaço foi pensando para facilitar seu acesso ao evento e fortalecer a construção coletiva da saúde prisional de Pernambuco.</p>
+        </div>
       </div>
       <div class="col-12">
         <div class="speaker-block">
           <p class="speaker-name">Jonatan Barros</p>
           <p class="speaker-role">
-            Diretor da Divisão de Saúde do Sistema Prisional (DASSP) /
+            Diretor da Divisão de Saúde do Sistema Prisional (DASSP) <br />
             Presidente da Comissão Organizadora
           </p>
         </div>
