@@ -5,28 +5,28 @@ Template Name: Comissões
 get_header();
 ?>
 
-<section class="section-comissoes">
+<section class="section-committees">
   <div class="container">
 
-    <h1 class="comissoes-page-title">COMISSÕES</h1>
-    <div class="comissoes-divider"></div>
+    <h1 class="section-title color-blue mb-0">COMISSÕES</h1>
+    <hr class="border-primary border-3 mt-2 mb-5">
 
-    <div class="row comissoes-grid">
+    <div class="row">
 
-      <!-- Coluna Esquerda -->
-      <div class="col-12 col-md-6 comissoes-col">
+      <!-- Left column -->
+      <div class="col-12 col-md-6 pe-lg-5">
 
-        <div class="comissao-group">
-          <h2 class="comissao-group-title">COORDENAÇÃO GERAL:</h2>
-          <ul class="comissao-members">
+        <div class="committee-group">
+          <h2 class="committee-group-title">COORDENAÇÃO GERAL:</h2>
+          <ul class="committee-members">
             <li>Jonatan Barros</li>
             <li>Maria Júlia Nascimento</li>
           </ul>
         </div>
 
-        <div class="comissao-group">
-          <h2 class="comissao-group-title">COMISSÃO CIENTÍFICA E DE PROGRAMAÇÃO</h2>
-          <ul class="comissao-members">
+        <div class="committee-group">
+          <h2 class="committee-group-title">COMISSÃO CIENTÍFICA E DE PROGRAMAÇÃO</h2>
+          <ul class="committee-members">
             <li>Meiry</li>
             <li>Dayvison Marques</li>
             <li>Suelen</li>
@@ -34,9 +34,9 @@ get_header();
           </ul>
         </div>
 
-        <div class="comissao-group">
-          <h2 class="comissao-group-title">COMISSÃO DE MOBILIZAÇÃO E TRANSPORTE</h2>
-          <ul class="comissao-members">
+        <div class="committee-group">
+          <h2 class="committee-group-title">COMISSÃO DE MOBILIZAÇÃO E TRANSPORTE</h2>
+          <ul class="committee-members">
             <li>Maria Eduarda Soares</li>
             <li>Pedro</li>
             <li>Mikeline Soares Almeida</li>
@@ -46,20 +46,20 @@ get_header();
 
       </div>
 
-      <!-- Coluna Direita -->
-      <div class="col-12 col-md-6 comissoes-col">
+      <!-- Right column -->
+      <div class="col-12 col-md-6 pe-lg-5">
 
-        <div class="comissao-group">
-          <h2 class="comissao-group-title">COMISSÃO DE COMUNICAÇÃO, DIVULGAÇÃO E RELATORIA</h2>
-          <ul class="comissao-members">
+        <div class="committee-group">
+          <h2 class="committee-group-title">COMISSÃO DE COMUNICAÇÃO, DIVULGAÇÃO E RELATORIA</h2>
+          <ul class="committee-members">
             <li>Fernando Valença e Alysson Ramos</li>
             <li>Rebeca e Suenia (relatoria)</li>
           </ul>
         </div>
 
-        <div class="comissao-group">
-          <h2 class="comissao-group-title">COMISSÃO DE LOGÍSTICA E INFRAESTRUTURA</h2>
-          <ul class="comissao-members">
+        <div class="committee-group">
+          <h2 class="committee-group-title">COMISSÃO DE LOGÍSTICA E INFRAESTRUTURA</h2>
+          <ul class="committee-members">
             <li>Kika Santos</li>
             <li>Beatriz Andrade</li>
             <li>Andrea Carla</li>
