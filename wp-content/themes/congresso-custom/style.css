@@ -957,12 +957,10 @@ p {
    PAGE SOBRE
    ============================================================ */
 
-/* Hero photo */
 .sobre-hero {
   width: 100%;
   overflow: hidden;
   max-height: 480px;
-  display: block;
 }
 
 .sobre-hero-img {
@@ -981,108 +979,22 @@ p {
   }
 }
 
-/* Boas Vindas section */
-.section-boas-vindas {
+/* Welcome section */
+.section-welcome {
   background-color: #ffffff;
   padding: 70px 0 80px;
 }
 
-.boas-vindas-title {
-  font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 6rem;
-  color: #0068ff;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  margin-bottom: 1.5rem;
-  line-height: 1;
-}
-
-.boas-vindas-text,
-.boas-vindas-content p {
-  font-family: "Montserrat", Arial, sans-serif;
+.welcome-content p {
   font-size: 1.6rem;
-  font-weight: 400;
   color: #333333;
   line-height: 1.75;
-  margin-bottom: 1rem;
 }
 
-.boas-vindas-encontrara-title {
-  font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 6rem;
-  color: #0068ff;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  margin-bottom: 1rem;
-}
-
-.boas-vindas-list {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.boas-vindas-list li {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 1.2rem;
-  color: #333333;
-  line-height: 1.7;
-  margin-bottom: 0.4rem;
-}
-
-.boas-vindas-bottom {
-  margin-top: 2rem;
-  padding-top: 2rem;
-}
-
-.speaker-block {
-  padding-top: 0;
-}
-
-.speaker-name {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #223254;
-  margin-bottom: 0.25rem;
-}
-
-.speaker-role {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 1.3rem;
-  font-weight: 400;
-  color: #555555;
-  line-height: 1.55;
-  margin-bottom: 0;
-  font-style: italic;
-}
-
-/* Programação Completa section */
-.section-programacao {
+/* Full schedule section */
+.section-full-schedule {
   background-color: #0068ff;
   padding: 80px 0 100px;
-}
-
-.programacao-title {
-  font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 6rem;
-  color: #ffffff;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  margin-bottom: 0;
-  line-height: 1;
-}
-
-.programacao-divider {
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.4);
-  width: 100%;
-  margin: 16px 0 60px;
-}
-
-.day-block {
-  align-items: flex-start;
-  margin-bottom: 0;
 }
 
 .day-date-col {
@@ -1096,7 +1008,7 @@ p {
   }
 }
 
-.day-number {
+.schedule-date-number {
   font-family: "Bebas Neue", Arial, sans-serif;
   font-size: 9rem;
   color: #ffffff;
@@ -1105,7 +1017,7 @@ p {
   letter-spacing: 0.02em;
 }
 
-.day-label {
+.schedule-day-name {
   font-family: "Bebas Neue", Arial, sans-serif;
   font-size: 2.5rem;
   color: #ffffff;
@@ -1135,7 +1047,6 @@ p {
 }
 
 .schedule-time {
-  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
@@ -1145,33 +1056,19 @@ p {
 }
 
 .schedule-activity {
-  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.3rem;
-  font-weight: 400;
   color: rgba(255, 255, 255, 0.88);
   line-height: 1.5;
 }
 
-.programacao-day-divider {
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.15);
-  margin: 50px 0;
-}
-
 @media (max-width: 767px) {
-  .boas-vindas-title,
-  .boas-vindas-encontrara-title,
-  .programacao-title {
+  .section-welcome .section-title,
+  .section-full-schedule .section-title {
     font-size: 4rem;
   }
 
-  .day-number {
-    font-size: 5rem;
-  }
-
-  .day-label {
-    font-size: 1.8rem;
-  }
+  .schedule-date-number { font-size: 5rem; }
+  .schedule-day-name    { font-size: 1.8rem; }
 }
 
 @media (max-width: 575px) {
@@ -1186,51 +1083,19 @@ p {
 }
 
 /* ============================================================
-   PAGE COMISSÕES
+   PAGE COMMITTEES
    ============================================================ */
 
-.section-comissoes {
+.section-committees {
   background-color: #ffffff;
   padding: 70px 0 100px;
 }
 
-.comissoes-page-title {
-  font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 6rem;
-  color: #0068ff;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  margin-bottom: 0;
-}
-
-.comissoes-divider {
-  height: 3px;
-  background-color: #0068ff;
-  width: 100%;
-  margin: 12px 0 55px;
-}
-
-.comissoes-col {
-  padding-right: 2.5rem;
-}
-
-@media (max-width: 767px) {
-  .comissoes-col {
-    padding-right: 15px;
-  }
-
-  .comissoes-page-title {
-    font-size: 4rem;
-  }
-}
-
-.comissao-group {
+.committee-group {
   margin-bottom: 3rem;
 }
 
-.comissao-group-title {
-  font-family: "Montserrat", Arial, sans-serif;
+.committee-group-title {
   font-size: 0.9rem;
   font-weight: 700;
   color: #0068ff;
@@ -1240,16 +1105,14 @@ p {
   line-height: 1.4;
 }
 
-.comissao-members {
+.committee-members {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.comissao-members li {
-  font-family: "Montserrat", Arial, sans-serif;
+.committee-members li {
   font-size: 1rem;
-  font-weight: 400;
   color: #222222;
   line-height: 1.6;
   margin-bottom: 0.15rem;
