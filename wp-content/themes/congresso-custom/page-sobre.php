@@ -19,14 +19,15 @@ get_header();
     <h2 class="section-title color-blue mb-4">BOAS VINDAS</h2>
 
     <div class="row">
-      <div class="col-12 col-lg-8">
+      <div class="col-12
+      ">
         <div class="welcome-content">
           <?php the_content(); ?>
         </div>
       </div>
     </div>
 
-    <div class="row mt-4 pt-4 border-top">
+    <div class="row mt-4 pt-4">
       <div class="col-12">
         <h3 class="section-title color-blue mb-4">AQUI, VOCÊ ENCONTRARÁ:</h3>
         <ul class="ps-4 mb-5 fs-5">
@@ -48,14 +49,11 @@ get_header();
   </div>
 </section>
 
-<!-- Full Schedule -->
 <section class="section-full-schedule">
   <div class="container">
 
-    <h2 class="section-title mb-0">PROGRAMAÇÃO COMPLETA</h2>
-    <hr class="border-white border-2 opacity-50 mt-3 mb-5">
+    <h2 class="section-title mb-5">PROGRAMAÇÃO COMPLETA</h2>
 
-    <!-- 15/04 -->
     <div class="row align-items-start">
       <div class="col-12 col-md-3 day-date-col">
         <p class="schedule-date-number">15/04</p>
@@ -65,7 +63,7 @@ get_header();
         <ul class="schedule-list">
           <li class="schedule-item">
             <span class="schedule-time">09:00 – 09:30</span>
-            <span class="schedule-activity">Credenciamento e boas-vindas</span>
+            <span class="schedule-activity">  </span>
           </li>
           <li class="schedule-item">
             <span class="schedule-time">09:30 – 10:00</span>
