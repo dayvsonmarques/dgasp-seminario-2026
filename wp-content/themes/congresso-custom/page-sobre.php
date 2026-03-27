@@ -12,59 +12,54 @@ get_header();
 </div>
 <?php endif; ?>
 
-<!-- Boas Vindas -->
-<section class="section-boas-vindas">
+<!-- Welcome -->
+<section class="section-welcome">
   <div class="container">
 
-    <h2 class="boas-vindas-title">BOAS VINDAS</h2>
+    <h2 class="section-title color-blue mb-4">BOAS VINDAS</h2>
 
     <div class="row">
-      <div class="col-12">
-        <div class="boas-vindas-content">
+      <div class="col-12 col-lg-8">
+        <div class="welcome-content">
           <?php the_content(); ?>
         </div>
       </div>
     </div>
 
-    <div class="row boas-vindas-bottom">
+    <div class="row mt-4 pt-4 border-top">
       <div class="col-12">
-        <h3 class="boas-vindas-encontrara-title">AQUI, VOCÊ ENCONTRARÁ:</h3>
-        <ul class="boas-vindas-list bold">
-          <li>Programação atualizada</li>
-          <li>Informações sobre inscrições</li>
-          <li>Orientação para submissão de trabalhos e divulgação dos aprovados</li>
-          <li>Informações gerais sobre o evento</li>
+        <h3 class="section-title color-blue mb-4">AQUI, VOCÊ ENCONTRARÁ:</h3>
+        <ul class="ps-4 mb-5 fs-5">
+          <li class="mb-2">Programação atualizada</li>
+          <li class="mb-2">Informações para submissão de trabalhos e divulgação dos aprovados</li>
+          <li class="mb-2">Informações gerais sobre o evento</li>
+          <li class="mb-2">Fale conosco e muito mais!</li>
         </ul>
-        <div class="boas-vindas-content">
-          <p>Participe, inscreva-se e acompanhe. Este espaço foi pensando para facilitar seu acesso ao evento e fortalecer a construção coletiva da saúde prisional de Pernambuco.</p>
-        </div>
       </div>
       <div class="col-12">
-        <div class="speaker-block">
-          <p class="speaker-name">Jonatan Barros</p>
-          <p class="speaker-role">
-            Diretor da Divisão de Saúde do Sistema Prisional (DASSP) <br />
-            Presidente da Comissão Organizadora
-          </p>
-        </div>
+        <p class="fw-bold fs-5 color-dark-blue mb-1">Jonatan Barros</p>
+        <p class="fst-italic text-secondary mb-0 fs-5">
+          Diretor da Divisão de Saúde do Sistema Prisional (DASSP) /
+          Presidente da Comissão Organizadora
+        </p>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- Programação Completa -->
-<section class="section-programacao">
+<!-- Full Schedule -->
+<section class="section-full-schedule">
   <div class="container">
 
-    <h2 class="programacao-title">PROGRAMAÇÃO COMPLETA</h2>
-    <div class="programacao-divider"></div>
+    <h2 class="section-title mb-0">PROGRAMAÇÃO COMPLETA</h2>
+    <hr class="border-white border-2 opacity-50 mt-3 mb-5">
 
-    <!-- 15/04 - Quarta-feira -->
-    <div class="day-block row">
+    <!-- 15/04 -->
+    <div class="row align-items-start">
       <div class="col-12 col-md-3 day-date-col">
-        <p class="day-number">15/04</p>
-        <p class="day-label">QUARTA-FEIRA</p>
+        <p class="schedule-date-number">15/04</p>
+        <p class="schedule-day-name">QUARTA-FEIRA</p>
       </div>
       <div class="col-12 col-md-9">
         <ul class="schedule-list">
@@ -104,13 +99,13 @@ get_header();
       </div>
     </div>
 
-    <div class="programacao-day-divider"></div>
+    <hr class="border-white border-1 opacity-25 my-5">
 
-    <!-- 16/04 - Quinta-feira -->
-    <div class="day-block row">
+    <!-- 16/04 -->
+    <div class="row align-items-start">
       <div class="col-12 col-md-3 day-date-col">
-        <p class="day-number">16/04</p>
-        <p class="day-label">QUINTA-FEIRA</p>
+        <p class="schedule-date-number">16/04</p>
+        <p class="schedule-day-name">QUINTA-FEIRA</p>
       </div>
       <div class="col-12 col-md-9">
         <ul class="schedule-list">
