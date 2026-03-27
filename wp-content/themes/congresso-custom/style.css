@@ -75,7 +75,7 @@ p {
 
 .section-title {
   font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 6rem;
+  font-size: 7rem;
   color: #ffffff;
   line-height: 1.1em;
   letter-spacing: 0.02em;
@@ -1010,7 +1010,7 @@ p {
 
 .schedule-date-number {
   font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 9rem;
+  font-size: 8rem;
   color: #ffffff;
   line-height: 1;
   margin-bottom: 0;
@@ -1019,7 +1019,7 @@ p {
 
 .schedule-day-name {
   font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.7rem;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -1047,7 +1047,7 @@ p {
 }
 
 .schedule-time {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
   min-width: 150px;
@@ -1056,7 +1056,7 @@ p {
 }
 
 .schedule-activity {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.88);
   line-height: 1.5;
 }
