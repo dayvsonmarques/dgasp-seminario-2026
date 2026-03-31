@@ -2,7 +2,7 @@
 $home_id = get_the_ID();
 $part_subtitle = get_post_meta($home_id, '_home_participation_subtitle', true) ?: 'Inscreva-se e faça parte dessa jornada de saúde, integração e cuidado.';
 $part_btn_text = get_post_meta($home_id, '_home_participation_btn_text', true) ?: 'CADASTRE-SE AQUI';
-$part_btn_link = get_post_meta($home_id, '_home_participation_btn_link', true) ?: '#';
+$part_btn_link = get_post_meta($home_id, '_home_participation_btn_link', true) ?: 'https://docs.google.com/forms/d/e/1FAIpQLSfwG6OSr0TNrpbxu4HmNmCJoYFaUL0IGY9B-X_FNiZBo_DWyw/viewform';
 ?>
 <section class="section-participation bg-white">
     <div class="container text-center">

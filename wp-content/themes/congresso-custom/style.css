@@ -1096,7 +1096,7 @@ p {
 }
 
 .committee-group-title {
-  font-size: 0.9rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #0068ff;
   text-transform: uppercase;
@@ -1112,7 +1112,7 @@ p {
 }
 
 .committee-members li {
-  font-size: 1rem;
+  font-size: 1.8rem;
   color: #222222;
   line-height: 1.6;
   margin-bottom: 0.15rem;

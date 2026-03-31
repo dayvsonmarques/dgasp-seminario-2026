@@ -8,8 +8,7 @@ get_header();
 <section class="section-committees">
   <div class="container">
 
-    <h1 class="section-title color-blue mb-0">COMISSÕES</h1>
-    <hr class="border-primary border-3 mt-2 mb-5">
+    <h1 class="section-title color-blue mb-5">COMISSÕES</h1>
 
     <div class="row">
 
@@ -28,7 +27,7 @@ get_header();
           <h2 class="committee-group-title">COMISSÃO CIENTÍFICA E DE PROGRAMAÇÃO</h2>
           <ul class="committee-members">
             <li>Meiry</li>
-            <li>Dayvison Marques</li>
+            <li>Dayvson Marques</li>
             <li>Suelen</li>
             <li>Ismael Gomes da Rocha</li>
           </ul>

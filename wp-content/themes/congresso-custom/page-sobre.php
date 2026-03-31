@@ -63,7 +63,7 @@ get_header();
         <ul class="schedule-list">
           <li class="schedule-item">
             <span class="schedule-time">09:00 – 09:30</span>
-            <span class="schedule-activity">  </span>
+            <span class="schedule-activity">Credenciamento e boas-vindas</span>
           </li>
           <li class="schedule-item">
             <span class="schedule-time">09:30 – 10:00</span>
