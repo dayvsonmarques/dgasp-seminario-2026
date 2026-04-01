@@ -24,14 +24,14 @@ $block2_link    = get_post_meta($home_id, '_home_block2_btn_link', true) ?: '#';
                     <div class="col-md-6 mb-4">
                         <div class="card event-card px-5 py-5">
                             <h3 class="card-title color-blue"><?php echo esc_html($block1_title); ?></h3>
-                            <p><?php echo esc_html($block1_summary); ?></p>
+                            <p class="d-none"><?php echo esc_html($block1_summary); ?></p>
                             <a href="<?php echo esc_url($block1_link); ?>" target="_blank" class="btn-main"><?php echo esc_html($block1_btn); ?></a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card event-card px-5 py-5">
                             <h3 class="card-title color-blue"><?php echo esc_html($block2_title); ?></h3>
-                            <p><?php echo esc_html($block2_summary); ?></p>
+                            <p class="d-none"><?php echo esc_html($block2_summary); ?></p>
                             <a href="<?php echo esc_url($block2_link); ?>" target="_blank" class="btn-main"><?php echo esc_html($block2_btn); ?></a>
                         </div>
                     </div>

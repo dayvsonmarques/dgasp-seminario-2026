@@ -9,12 +9,12 @@
                 <nav class="footer-menu mt-2">
                     <div class="row pt-5 pb-5">
                         <div class="col-6 col-lg-4 d-flex flex-column footer-menu__col footer-menu__col--left">
-                            <a href="#" class="footer-link text-white text-decoration-none mb-2">INÍCIO</a>
-                            <a href="#" class="footer-link text-white text-decoration-none">SOBRE</a>
+                            <a href="<?=  get_site_url() . '/inicio' ?>" class="footer-link text-white text-decoration-none mb-2">INÍCIO</a>
+                            <a href="<?=  get_site_url() . '/sobre' ?>" class="footer-link text-white text-decoration-none">SOBRE</a>
                         </div>
                         <div class="col-6 col-lg-8 d-flex flex-column footer-menu__col footer-menu__col--right">
-                            <a href="#" class="footer-link text-white text-decoration-none mb-2">COMISSÕES</a>
-                            <a href="#" class="footer-link text-white text-decoration-none">EDITAL</a>
+                            <a href="<?=  get_site_url() . '/comissoes' ?>" class="footer-link text-white text-decoration-none mb-2">COMISSÕES</a>
+                            <a href="<?=  get_site_url() . '/edital' ?>" class="footer-link text-white text-decoration-none">EDITAL</a>
                         </div>
                     </div>
                 </nav>
@@ -24,7 +24,7 @@
                     <div class="border-start border-start-blue">
                         <div class="fw-bold h1 pb-3 ff-heading">CONTATO</div>
                         <p class="h5 light text-nowrap pb-2">Email: <?php echo esc_html(get_theme_mod('congresso_footer_email', 'loremipsum@gmail.com')); ?></p>
-                        <p class="h5 light text-nowrap">Telefone: <?php echo esc_html(get_theme_mod('congresso_footer_phone', '(81) xxxxx - xxxx')); ?>
+                        <p class="h5 light text-nowrap d-none">Telefone: <?php echo esc_html(get_theme_mod('congresso_footer_phone', '(81) xxxxx - xxxx')); ?>
                     </div>
                 </div>
             </div>
