@@ -5,49 +5,6 @@ Template Name: Sobre
 get_header();
 ?>
 
-<!-- Hero Photo -->
-<?php if ( has_post_thumbnail() ) : ?>
-<div class="sobre-hero">
-  <?php the_post_thumbnail( 'full', [ 'class' => 'sobre-hero-img', 'alt' => get_the_title() ] ); ?>
-</div>
-<?php endif; ?>
-
-<!-- Welcome -->
-<section class="section-welcome">
-  <div class="container">
-
-    <h2 class="section-title color-blue mb-4">BOAS VINDAS</h2>
-
-    <div class="row">
-      <div class="col-12
-      ">
-        <div class="welcome-content">
-          <?php the_content(); ?>
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt-4 pt-4">
-      <div class="col-12">
-        <h3 class="section-title color-blue mb-4">AQUI, VOCÊ ENCONTRARÁ:</h3>
-        <ul class="ps-4 mb-5 fs-5">
-          <li class="mb-2">Programação atualizada</li>
-          <li class="mb-2">Informações para submissão de trabalhos e divulgação dos aprovados</li>
-          <li class="mb-2">Informações gerais sobre o evento</li>
-          <li class="mb-2">Fale conosco e muito mais!</li>
-        </ul>
-      </div>
-      <div class="col-12">
-        <p class="fw-bold fs-5 color-dark-blue mb-1">Jonatan Barros</p>
-        <p class="fst-italic text-secondary mb-0 fs-5">
-          Diretor da Divisão de Saúde do Sistema Prisional (DASSP) /
-          Presidente da Comissão Organizadora
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <section class="section-full-schedule">
   <div class="container">
