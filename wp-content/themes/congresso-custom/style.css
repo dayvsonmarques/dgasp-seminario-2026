@@ -959,23 +959,18 @@ p {
 
 .sobre-hero {
   width: 100%;
-  overflow: hidden;
-  max-height: 480px;
+  height: 480px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
-.sobre-hero-img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
+
 
 @media (max-width: 767px) {
-  .sobre-hero,
-  .sobre-hero-img {
+  .sobre-hero {
     height: 240px;
-    max-height: 240px;
   }
 }
 
@@ -1088,20 +1083,33 @@ p {
 
 .section-committees {
   background-color: #ffffff;
-  padding: 70px 0 100px;
+}
+
+.committees-page-title {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.committees-list {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
 }
 
 .committee-group {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .committee-group-title {
-  font-size: 1.8rem;
   font-weight: 700;
-  color: #0068ff;
+  color: #717171;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.85rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
   line-height: 1.4;
 }
 
@@ -1112,8 +1120,7 @@ p {
 }
 
 .committee-members li {
-  font-size: 1.8rem;
-  color: #222222;
-  line-height: 1.6;
-  margin-bottom: 0.15rem;
+  color: #717171;
+  line-height: 1.7;
 }
+

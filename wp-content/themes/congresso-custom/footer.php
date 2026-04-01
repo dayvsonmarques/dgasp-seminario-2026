@@ -9,12 +9,12 @@
                 <nav class="footer-menu mt-2">
                     <div class="row pt-5 pb-5">
                         <div class="col-6 col-lg-4 d-flex flex-column footer-menu__col footer-menu__col--left">
-                            <a href="#" class="footer-link text-white text-decoration-none mb-2">INÍCIO</a>
-                            <a href="#" class="footer-link text-white text-decoration-none">SOBRE</a>
+                            <a href="<?=  get_site_url() . '/inicio' ?>" class="footer-link text-white text-decoration-none mb-2">INÍCIO</a>
+                            <a href="<?=  get_site_url() . '/sobre' ?>" class="footer-link text-white text-decoration-none">SOBRE</a>
                         </div>
                         <div class="col-6 col-lg-8 d-flex flex-column footer-menu__col footer-menu__col--right">
-                            <a href="#" class="footer-link text-white text-decoration-none mb-2">COMISSÕES</a>
-                            <a href="#" class="footer-link text-white text-decoration-none">EDITAL</a>
+                            <a href="<?=  get_site_url() . '/comissoes' ?>" class="footer-link text-white text-decoration-none mb-2">COMISSÕES</a>
+                            <a href="<?=  get_site_url() . '/edital' ?>" class="footer-link text-white text-decoration-none">EDITAL</a>
                         </div>
                     </div>
                 </nav>
