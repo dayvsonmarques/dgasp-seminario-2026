@@ -203,9 +203,37 @@ p {
 .site-header {
   background: #ffffff;
   min-height: 90px;
+  transition: box-shadow 0.3s ease;
 }
 .site-header .row {
   min-height: 90px;
+}
+
+.site-header--sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+  animation: slideDown 0.3s ease;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.site-header--sticky .header-logo--main {
+  max-width: 18vw;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
+}
+
+body:has(.site-header--sticky) main {
+  padding-top: 110px;
 }
 
 .header-logo {
