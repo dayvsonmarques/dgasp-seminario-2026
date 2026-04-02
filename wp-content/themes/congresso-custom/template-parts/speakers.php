@@ -13,7 +13,7 @@ $has_speakers = $speakers->have_posts();
   <div id="speakersCarousel" class="carousel slide carousel-fade" data-bs-ride="false">
     <div class="carousel-inner">
 
-      <div class="carousel-item carousel-item--banner active">
+      <div class="carousel-item carousel-item--banner active mb-5">
         <div class="speaker-slide speaker-slide--banner">
           <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/palestrantes-banner.png' ); ?>"
                alt="Palestrantes" class="speaker-slide__banner-img">

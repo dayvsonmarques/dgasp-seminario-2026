@@ -51,7 +51,6 @@ h6 {
 
 .light {
   font-weight: 400 !important;
-  opacity: 0.7;
 }
 
 .ff-heading {
@@ -890,13 +889,12 @@ body:has(.site-header--sticky) main {
   }
 }
 
-.section-about-hero, .bg-crosses {
-  background: url("assets/img/crosses.jpg") no-repeat, #0068ff;
-  background-size: 100% auto;
+.section-about-hero {
+  background: url("assets/img/crosses.jpg") center center / cover no-repeat, #0068ff;
   padding: 60px 0;
   position: relative;
 }
-.section-about-hero .about-hero-title, .bg-crosses .about-hero-title {
+.section-about-hero .about-hero-title {
   color: #ffffff;
   font-size: 1.8rem;
   font-weight: 700;
@@ -904,7 +902,7 @@ body:has(.site-header--sticky) main {
   margin: 0;
 }
 @media (min-width: 768px) {
-  .section-about-hero .about-hero-title, .bg-crosses .about-hero-title {
+  .section-about-hero .about-hero-title {
     font-size: 2.5rem;
   }
 }
@@ -977,8 +975,23 @@ body:has(.site-header--sticky) main {
 }
 
 .bg-crosses {
-  height: 25vh;
-  width: 100%;
+  background: url("assets/img/crosses.jpg") center center / cover no-repeat, #0068ff;
+}
+
+.section-about-event {
+  height: auto;
+}
+
+.about-event-title {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about-event-text {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
 }
 
 /* ============================================================
@@ -1145,18 +1158,15 @@ body:has(.site-header--sticky) main {
 .speaker-slide--even  { background-color: #0068ff; }
 .speaker-slide--odd { background-color: #223254; }
 
-.carousel-item--banner {
-  height: auto;
-}
-
 .speaker-slide--banner {
   background-color: #000;
-  height: auto;
 }
 
 .speaker-slide__banner-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -1259,6 +1269,15 @@ body:has(.site-header--sticky) main {
   .speaker-slide__bio {
     text-align: left;
   }
+}
+
+/* ============================================================
+   PAGE 404
+   ============================================================ */
+
+.error-404__code {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 8rem;
 }
 
 /* ============================================================

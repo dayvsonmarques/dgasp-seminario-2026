@@ -6,20 +6,20 @@ get_header();
 ?>
 
 <!-- SOBRE O EVENTO -->
-<section class="section-about-event bg-crosses">
+<section class="section-about-event bg-crosses py-5">
   <div class="container py-5">
     <div class="row align-items-start g-5">
 
-      <div class="col-12 col-lg-3 flex-shrink-0">
-        <h1 class="about-event-title">
-          <span class="color-blue d-lg-block d-inline-block">SOBRE O</span>
+      <div class="col-12 col-lg-4">
+        <h1 class="about-event-title section-title">
+          <span class=" d-lg-block d-inline-block">SOBRE <span class="light">O</span></span>
           <span class="d-lg-block d-inline-block">EVENTO</span>
         </h1>
       </div>
 
-      <div class="col-12 col-md-9">
-        <p class="about-event-text">
-          O III Seminário Estadual de Atenção à Saúde Prisional de Pernambuco, reunirá profissionais de saúde, gestores, diretores de unidades prisionais, equipes de segurança, representantes da sociedade civil organizada e representantes do sistema de justiça. O encontro busca fortalecer o debate, promover a troca de experiências e integrar saberes para qualificar a atenção à saúde da população privada de liberdade (PPL) em Pernambuco.
+      <div class="col-12 col-lg-8">
+        <p class="about-event-text fs-3">
+          O <span class="bold">III Seminário Estadual de Atenção à Saúde Prisional de Pernambuco</span>, reunirá profissionais de saúde, gestores, diretores de unidades prisionais, equipes de segurança, representantes da sociedade civil organizada e representantes do sistema de justiça. O encontro busca fortalecer o debate, promover a troca de experiências e integrar saberes para qualificar a atenção à saúde da população privada de liberdade (PPL) em Pernambuco.
         </p>
       </div>
 

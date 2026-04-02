@@ -6,7 +6,11 @@ $thumbnail_id = get_post_thumbnail_id( $sobre->ID );
 ?>
 
 <?php if ( $thumbnail_id ) : ?>
-<div class="sobre-hero" style="background-image: url('<?php echo wp_get_attachment_url( $thumbnail_id ); ?>');">
+<div class="sobre-hero">
+  <?php echo wp_get_attachment_image( $thumbnail_id, 'full', false, [
+    'class' => 'sobre-hero-img',
+    'alt'   => esc_attr( get_the_title( $sobre->ID ) ),
+  ] ); ?>
 </div>
 <?php endif; ?>
 
