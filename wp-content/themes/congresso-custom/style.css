@@ -863,7 +863,8 @@ p {
 }
 
 .section-about-hero, .bg-crosses {
-  background: url("assets/img/crosses.jpg") center center / cover no-repeat, #0068ff;
+  background: url("assets/img/crosses.jpg") no-repeat, #0068ff;
+  background-size: 100% auto;
   padding: 60px 0;
   position: relative;
 }
@@ -958,96 +959,24 @@ p {
 
 .sobre-hero {
   width: 100%;
-  height: 480px;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  max-height: 480px;
 }
 
-
+.sobre-hero-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
 
 @media (max-width: 767px) {
-  .sobre-hero {
+  .sobre-hero,
+  .sobre-hero-img {
     height: 240px;
+    max-height: 240px;
   }
-}
-
-/* About event section */
-.section-about-event {
-  height: auto !important;
-}
-
-.about-event-title {
-  font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: clamp(3.5rem, 7vw, 6rem);
-  font-weight: 400;
-  line-height: 1;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.about-event-title .color-blue {
-  color: #ffffff !important;
-}
-
-.about-event-text {
-  font-size: 1.4rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.8;
-}
-
-/* Topics section */
-.section-topics {
-  background-color: #ffffff;
-}
-
-.topics-title {
-  line-height: 1;
-}
-
-.topics-title__main {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  color: #0068ff;
-  text-transform: uppercase;
-}
-
-.topics-title__sub {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 2rem;
-  font-weight: 300;
-  color: #0068ff;
-  text-transform: uppercase;
-}
-
-.topics-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.topic-item {
-  font-size: 1rem;
-  line-height: 1.5;
-  padding: 1.25rem 0 1.25rem 1.25rem;
-  border-left: 3px solid #0068ff;
-  margin-bottom: 0.75rem;
-}
-
-.topic-heading {
-  font-weight: 700;
-  color: #888888;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
-}
-
-.topic-desc {
-  color: #888888;
-  font-size: 0.9rem;
-  text-transform: uppercase;
 }
 
 /* Welcome section */
@@ -1064,7 +993,7 @@ p {
 
 /* Full schedule section */
 .section-full-schedule {
-  background-color: #223254;
+  background-color: #0068ff;
   padding: 80px 0 100px;
 }
 
@@ -1154,38 +1083,174 @@ p {
 }
 
 /* ============================================================
+   SECTION SPEAKERS SLIDER
+   ============================================================ */
+
+.section-speakers {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.section-speakers .carousel-inner {
+  overflow: visible;
+}
+
+.section-speakers .carousel-item {
+  height: 100vh;
+}
+
+.speaker-slide {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.speaker-slide--odd  { background-color: #0068ff; }
+.speaker-slide--even { background-color: #223254; }
+
+.carousel-item--banner {
+  height: auto;
+}
+
+.speaker-slide--banner {
+  background-color: #000;
+  height: auto;
+}
+
+.speaker-slide__banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.speaker-slide__inner {
+  padding: 60px 40px;
+}
+
+.speaker-slide__photo {
+  width: clamp(220px, 30vw, 400px);
+  height: clamp(220px, 30vw, 400px);
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.speaker-slide__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.speaker-slide__name {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.speaker-slide__prefix {
+  display: inline;
+}
+
+.speaker-slide__bio {
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.speaker-slide__bio p {
+  margin-bottom: 1rem;
+}
+
+.speaker-slide__bio p:last-child {
+  margin-bottom: 0;
+}
+
+.speakers-indicators {
+  bottom: 24px;
+}
+
+.speakers-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+.speakers-indicators .active {
+  background-color: #ffffff;
+}
+
+.section-speakers .carousel-control-prev,
+.section-speakers .carousel-control-next {
+  width: auto;
+  padding: 0 8px;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.section-speakers .carousel-control-prev:hover,
+.section-speakers .carousel-control-next:hover {
+  opacity: 0.7;
+}
+
+.section-speakers .carousel-control-prev-icon,
+.section-speakers .carousel-control-next-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+@media (max-width: 767px) {
+  .speaker-slide__inner {
+    padding: 40px 24px;
+    overflow-y: auto;
+  }
+
+  .speaker-slide__photo {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 1.5rem;
+  }
+
+  .speaker-slide__bio {
+    text-align: left;
+  }
+}
+
+/* ============================================================
    PAGE COMMITTEES
    ============================================================ */
 
 .section-committees {
   background-color: #ffffff;
-}
-
-.committees-page-title {
-  font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 6rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.1;
-}
-
-.committees-list {
-  flex: 1 1 0;
-  min-width: 0;
-  width: 100%;
+  padding: 70px 0 100px;
 }
 
 .committee-group {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .committee-group-title {
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #717171;
+  color: #0068ff;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.85rem;
   line-height: 1.4;
 }
 
@@ -1196,7 +1261,8 @@ p {
 }
 
 .committee-members li {
-  color: #717171;
-  line-height: 1.7;
+  font-size: 1.8rem;
+  color: #222222;
+  line-height: 1.6;
+  margin-bottom: 0.15rem;
 }
-
