@@ -26,7 +26,7 @@ $thumbnail_id = get_post_thumbnail_id( $sobre->ID );
     <div class="row mt-4 pt-4">
       <div class="col-12">
         <h3 class="section-title color-blue mb-4">AQUI, VOCÊ ENCONTRARÁ:</h3>
-        <ul class="ps-4 mb-5 fs-5">
+        <ul class="ps-4 mb-5 fs-4">
           <li class="mb-2">Programação atualizada</li>
           <li class="mb-2">Informações para submissão de trabalhos e divulgação dos aprovados</li>
           <li class="mb-2">Informações gerais sobre o evento</li>
@@ -34,8 +34,8 @@ $thumbnail_id = get_post_thumbnail_id( $sobre->ID );
         </ul>
       </div>
       <div class="col-12">
-        <p class="fw-bold fs-5 color-dark-blue mb-1">Jonatan Barros</p>
-        <p class="fst-italic text-secondary mb-0 fs-5">
+        <p class="fw-bold fs-4 color-dark-blue mb-1">Jonatan Barros</p>
+        <p class="fst-italic text-secondary mb-0 fs-4">
           Diretor da DGASP /
           Presidente da Comissão Organizadora
         </p>
