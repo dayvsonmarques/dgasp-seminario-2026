@@ -5,7 +5,7 @@
                 <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo-footer.png'); ?>" alt="Logo do Seminário" class="img-fluid footer-logo" />
             </div>
             <div class="col-12 col-lg-1"></div>
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-xl-3">
                 <nav class="footer-menu mt-2">
                     <div class="row pt-5 pb-5">
                         <div class="col-6 col-lg-4 d-flex flex-column footer-menu__col footer-menu__col--left">
@@ -19,11 +19,14 @@
                     </div>
                 </nav>
             </div>
-            <div class="col-12 col-lg-4 pt-4">
+            <div class="col-12 col-xl-4 pt-4">
                 <div class="footer-contact fs-6">
                     <div class="border-start border-start-blue">
                         <div class="fw-bold h1 pb-3 ff-heading">CONTATO</div>
-                        <p class="h5 light text-nowrap pb-2">Email: <?php echo esc_html(get_theme_mod('congresso_footer_email', 'loremipsum@gmail.com')); ?></p>
+                        <p class="h5 light text-nowrap pb-2">
+                            <span class="d-none d-xl-inline-block">Email: </span>
+                            <span><?php echo esc_html(get_theme_mod('congresso_footer_email', 'loremipsum@gmail.com')); ?></span>
+                        </p>
                         <p class="h5 light text-nowrap d-none">Telefone: <?php echo esc_html(get_theme_mod('congresso_footer_phone', '(81) xxxxx - xxxx')); ?>
                     </div>
                 </div>

@@ -2,70 +2,55 @@
 /*
 Template Name: Comissões
 */
+
+$committees = [
+    [
+        'title'   => 'COORDENAÇÃO GERAL:',
+        'members' => ['Jonatan Barros', 'Maria Júlia Nascimento'],
+    ],
+    [
+        'title'   => 'COMISSÃO CIENTÍFICA E DE PROGRAMAÇÃO:',
+        'members' => ['Merielly Bezerra', 'Dayvson Marques', 'Suelen D\'Andrada', 'Ismael Gomes'],
+    ],
+    [
+        'title'   => 'COMISSÃO DE MOBILIZAÇÃO E TRANSPORTE:',
+        'members' => ['Maria Eduarda Soares', 'Pedro Ferreira', 'Mikeline Soares', 'Luciana Mello'],
+    ],
+    [
+        'title'   => 'COMISSÃO DE COMUNICAÇÃO, DIVULGAÇÃO E RELATORIA:',
+        'members' => ['Fernando Valença', 'Alysson Ramos', 'Rebeca Calado', 'Suenia Olivia'],
+    ],
+    [
+        'title'   => 'COMISSÃO DE LOGÍSTICA E INFRAESTRUTURA:',
+        'members' => ['Beatriz D\'Andrade', 'Maria Francisca Santos', 'Andrea Carla', 'Claudiana Rosa', 'Ildemar Rosa'],
+    ],
+];
+
 get_header();
 ?>
 
 <section class="section-committees">
-  <div class="container py-5 py-md-5">
+  <div class="container py-5">
+    <div class="row align-items-start g-4 g-md-5 py-4 py-md-5">
 
-    <div class="d-flex flex-column flex-md-row gap-4 gap-md-5 align-items-start py-5">
-
-      <h1 class="committees-page-title color-blue flex-shrink-0 mb-0">COMISSÕES</h1>
-
-      <div class="committees-list">
-
-        <div class="committee-group mb-5">
-          <h2 class="committee-group-title fs-2">COORDENAÇÃO GERAL:</h2>
-          <ul class="committee-members fs-1">
-            <li class="fs-3">Jonatan Barros</li>
-            <li class="fs-3">Maria Júlia Nascimento</li>
-          </ul>
-        </div>
-
-        <div class="committee-group mb-5">
-          <h2 class="committee-group-title fs-2">COMISSÃO CIENTÍFICA E DE PROGRAMAÇÃO:</h2>
-          <ul class="committee-members">
-            <li class="fs-3">Merielly Bezerra</li>
-            <li class="fs-3">Dayvson Marques</li>
-            <li class="fs-3">Suelen D'Andrada</li>
-            <li class="fs-3">Ismael Gomes</li>
-          </ul>
-        </div>
-
-        <div class="committee-group mb-5">
-          <h2 class="committee-group-title fs-2">COMISSÃO DE MOBILIZAÇÃO E TRANSPORTE:</h2>
-          <ul class="committee-members">
-            <li class="fs-3">Maria Eduarda Soares</li>
-            <li class="fs-3">Pedro Ferreira</li>
-            <li class="fs-3">Mikeline Soares</li>
-            <li class="fs-3">Luciana Mello</li>
-          </ul>
-        </div>
-
-        <div class="committee-group mb-5">
-          <h2 class="committee-group-title fs-2">COMISSÃO DE COMUNICAÇÃO, DIVULGAÇÃO E RELATORIA:</h2>
-          <ul class="committee-members">
-            <li class="fs-3">Fernando Valença</li>
-            <li class="fs-3">Alysson Ramos</li>
-            <li class="fs-3">Rebeca Calado</li>
-            <li class="fs-3">Suenia Olivia</li>
-          </ul>
-        </div>
-
-        <div class="committee-group mb-5">
-          <h2 class="committee-group-title fs-2">COMISSÃO DE LOGÍSTICA E INFRAESTRUTURA:</h2>
-          <ul class="committee-members">
-            <li class="fs-3">Beatriz D'Andrade</li>
-            <li class="fs-3">Maria Francisca Santos</li>
-            <li class="fs-3">Andrea Carla</li>
-            <li class="fs-3">Claudiana Rosa</li>
-            <li class="fs-3">Ildemar Rosa</li>
-          </ul>
-        </div>
-
+      <div class="col-12 col-lg-3">
+        <h1 class="section-title committees-page-title color-blue mb-0">COMISSÕES</h1>
       </div>
-    </div>
 
+      <div class="col-12 col-lg-9">
+        <?php foreach ( $committees as $group ) : ?>
+        <div class="mb-5">
+          <h2 class="committee-group-title fs-3 mb-3"><?php echo esc_html( $group['title'] ); ?></h2>
+          <ul class="committee-members list-unstyled mb-0">
+            <?php foreach ( $group['members'] as $member ) : ?>
+            <li class="fs-4"><?php echo esc_html( $member ); ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+        <?php endforeach; ?>
+      </div>
+
+    </div>
   </div>
 </section>
 
