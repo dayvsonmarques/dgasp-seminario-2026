@@ -5,10 +5,11 @@ Template Name: Sobre
 get_header();
 ?>
 
+<main>
 <!-- SOBRE O EVENTO -->
 <section class="section-about-event bg-crosses py-5">
   <div class="container py-5">
-    <div class="row align-items-start g-5">
+    <div class="row align-items-start g-5 py-5">
 
       <div class="col-12 col-lg-4">
         <h1 class="about-event-title section-title">
@@ -138,4 +139,5 @@ get_header();
   </div>
 </section>
 
+</main>
 <?php get_footer(); ?>
