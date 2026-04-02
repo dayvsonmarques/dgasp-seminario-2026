@@ -394,6 +394,72 @@ function congresso_ensure_core_pages(){
 }
 add_action('init', 'congresso_ensure_core_pages');
 
+// ═══════════════════════════════════════════════════════════════════
+// CPT: Palestrantes
+// ═══════════════════════════════════════════════════════════════════
+
+function congresso_register_palestrantes_cpt() {
+    register_post_type('palestrante', [
+        'labels' => [
+            'name'               => 'Palestrantes',
+            'singular_name'      => 'Palestrante',
+            'add_new'            => 'Adicionar Palestrante',
+            'add_new_item'       => 'Adicionar Novo Palestrante',
+            'edit_item'          => 'Editar Palestrante',
+            'new_item'           => 'Novo Palestrante',
+            'view_item'          => 'Ver Palestrante',
+            'search_items'       => 'Buscar Palestrantes',
+            'not_found'          => 'Nenhum palestrante encontrado',
+            'not_found_in_trash' => 'Nenhum palestrante na lixeira',
+        ],
+        'public'        => false,
+        'show_ui'       => true,
+        'show_in_menu'  => true,
+        'menu_icon'     => 'dashicons-microphone',
+        'supports'      => ['title', 'editor', 'thumbnail', 'page-attributes'],
+        'menu_position' => 5,
+    ]);
+}
+add_action('init', 'congresso_register_palestrantes_cpt');
+
+function congresso_palestrante_meta_box() {
+    add_meta_box(
+        'palestrante_meta',
+        'Informações do Palestrante',
+        'congresso_palestrante_meta_box_html',
+        'palestrante',
+        'side',
+        'default'
+    );
+}
+add_action('add_meta_boxes', 'congresso_palestrante_meta_box');
+
+function congresso_palestrante_meta_box_html($post) {
+    $prefix   = get_post_meta($post->ID, '_speaker_prefix', true);
+    $bg_color = get_post_meta($post->ID, '_speaker_bg_color', true) ?: '#223254';
+    wp_nonce_field('congresso_palestrante_meta', 'congresso_palestrante_nonce');
+    ?>
+    <p>
+        <label for="speaker_prefix"><strong>Prefixo (ex: MSC., Dr.):</strong></label><br>
+        <input type="text" id="speaker_prefix" name="speaker_prefix" value="<?php echo esc_attr($prefix); ?>" style="width:100%;">
+    </p>
+    <?php
+}
+
+function congresso_palestrante_meta_save($post_id) {
+    if (!isset($_POST['congresso_palestrante_nonce']) ||
+        !wp_verify_nonce($_POST['congresso_palestrante_nonce'], 'congresso_palestrante_meta')) return;
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (!current_user_can('edit_post', $post_id)) return;
+
+    if (isset($_POST['speaker_prefix'])) {
+        update_post_meta($post_id, '_speaker_prefix', sanitize_text_field($_POST['speaker_prefix']));
+    }
+}
+add_action('save_post_palestrante', 'congresso_palestrante_meta_save');
+
+// ════════════════════════════════════════════════════════════════════
+
 function congresso_menu_contact_scroll($atts, $item, $args){
     if (isset($args->theme_location) && $args->theme_location === 'primary') {
         $title = strtolower(trim($item->title));

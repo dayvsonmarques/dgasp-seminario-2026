@@ -5,93 +5,93 @@ Template Name: Sobre
 get_header();
 ?>
 
-<!-- Hero Photo -->
-<?php if ( has_post_thumbnail() ) : ?>
-<div class="sobre-hero">
-  <?php the_post_thumbnail( 'full', [ 'class' => 'sobre-hero-img', 'alt' => get_the_title() ] ); ?>
-</div>
-<?php endif; ?>
+<!-- SOBRE O EVENTO -->
+<section class="section-about-event bg-crosses">
+  <div class="container py-5">
+    <div class="row align-items-start g-5">
 
-<!-- Welcome -->
-<section class="section-welcome">
-  <div class="container">
-
-    <h2 class="section-title color-blue mb-4">BOAS VINDAS</h2>
-
-    <div class="row">
-      <div class="col-12
-      ">
-        <div class="welcome-content">
-          <?php the_content(); ?>
-        </div>
+      <div class="col-12 col-lg-3 flex-shrink-0">
+        <h1 class="about-event-title">
+          <span class="color-blue d-lg-block d-inline-block">SOBRE O</span>
+          <span class="d-lg-block d-inline-block">EVENTO</span>
+        </h1>
       </div>
-    </div>
 
-    <div class="row mt-4 pt-4">
-      <div class="col-12">
-        <h3 class="section-title color-blue mb-4">AQUI, VOCÊ ENCONTRARÁ:</h3>
-        <ul class="ps-4 mb-5 fs-5">
-          <li class="mb-2">Programação atualizada</li>
-          <li class="mb-2">Informações para submissão de trabalhos e divulgação dos aprovados</li>
-          <li class="mb-2">Informações gerais sobre o evento</li>
-          <li class="mb-2">Fale conosco e muito mais!</li>
-        </ul>
-      </div>
-      <div class="col-12">
-        <p class="fw-bold fs-5 color-dark-blue mb-1">Jonatan Barros</p>
-        <p class="fst-italic text-secondary mb-0 fs-5">
-          Diretor da Divisão de Saúde do Sistema Prisional (DASSP) /
-          Presidente da Comissão Organizadora
+      <div class="col-12 col-md-9">
+        <p class="about-event-text">
+          O III Seminário Estadual de Atenção à Saúde Prisional de Pernambuco, reunirá profissionais de saúde, gestores, diretores de unidades prisionais, equipes de segurança, representantes da sociedade civil organizada e representantes do sistema de justiça. O encontro busca fortalecer o debate, promover a troca de experiências e integrar saberes para qualificar a atenção à saúde da população privada de liberdade (PPL) em Pernambuco.
         </p>
       </div>
+
     </div>
+  </div>
+</section>
+
+<section class="section-topics">
+  <div class="container py-5">
+
+    <h2 class="topics-title mb-5">
+      <span class="topics-title__main">TEMAS</span><span class="topics-title__sub"> DAS MESAS</span>
+    </h2>
+
+    <ul class="topics-list">
+      <li class="topic-item">
+        <strong class="topic-heading fs-4">10 anos da PNAISP em Pernambuco:</strong>
+        <span class="topic-desc fs-4"> Conquistas, Desafios e Perspectivas na Atenção à Saúde Prisional</span>
+      </li>
+      <li class="topic-item">
+        <strong class="topic-heading fs-4">Governança Intersetorial no Cuidado em Saúde à População Privada de Liberdade:</strong>
+        <span class="topic-desc fs-4"> desafios e caminhos</span>
+      </li>
+      <li class="topic-item">
+        <strong class="topic-heading fs-4">Monitoramento, Avaliação e Qualidade do Cuidado na Atenção Primária à Saúde Prisional:</strong>
+        <span class="topic-desc fs-4"> indicadores, financiamento e gestão da informação</span>
+      </li>
+      <li class="topic-item">
+        <strong class="topic-heading fs-4">Saúde Mental na Saúde Prisional:</strong>
+        <span class="topic-desc fs-4"> adoecimento, transtorno e sofrimento psíquico no contexto prisional.</span>
+      </li>
+      <li class="topic-item">
+        <strong class="topic-heading fs-4">Caminhos para a Integralidade do Cuidado em Saúde na Atenção Primária Prisional</strong>
+      </li>
+    </ul>
 
   </div>
 </section>
 
+<!-- PROGRAMAÇÃO COMPLETA -->
 <section class="section-full-schedule">
   <div class="container">
 
     <h2 class="section-title mb-5">PROGRAMAÇÃO COMPLETA</h2>
 
+    <!-- 15/04 -->
     <div class="row align-items-start">
-      <div class="col-12 col-md-3 day-date-col">
+      <div class="col-12 col-lg-3 day-date-col">
         <p class="schedule-date-number">15/04</p>
         <p class="schedule-day-name">QUARTA-FEIRA</p>
       </div>
-      <div class="col-12 col-md-9">
+      <div class="col-12 col-lg-9">
         <ul class="schedule-list">
           <li class="schedule-item">
-            <span class="schedule-time">09:00 – 09:30</span>
-            <span class="schedule-activity">Credenciamento e boas-vindas</span>
+            <span class="schedule-time">09:00 – 11:00</span>
+            <span class="schedule-activity">Abertura do evento e Homenagem aos convidados</span>
           </li>
           <li class="schedule-item">
-            <span class="schedule-time">09:30 – 10:00</span>
-            <span class="schedule-activity">Abertura oficial do evento</span>
+            <span class="schedule-time">11:00 – 12:30</span>
+            <span class="schedule-activity">Mesa 01: 10 anos da PNAISP em Pernambuco: Conquistas, Desafios e Perspectivas na Atenção à Saúde Prisional</span>
           </li>
           <li class="schedule-item">
-            <span class="schedule-time">10:00 – 11:00</span>
-            <span class="schedule-activity">Conferência: Saúde Prisional no Brasil – avanços e desafios</span>
-          </li>
-          <li class="schedule-item">
-            <span class="schedule-time">11:00 – 12:00</span>
-            <span class="schedule-activity">Painel: Políticas públicas para a saúde da população privada de liberdade</span>
-          </li>
-          <li class="schedule-item">
-            <span class="schedule-time">12:00 – 14:00</span>
+            <span class="schedule-time">12:30 – 13:30</span>
             <span class="schedule-activity">Almoço</span>
           </li>
           <li class="schedule-item">
-            <span class="schedule-time">14:00 – 15:30</span>
-            <span class="schedule-activity">Grupos de trabalho temáticos</span>
+            <span class="schedule-time">13:30 – 14:50</span>
+            <span class="schedule-activity">Mesa 02: Governança Intersetorial no Cuidado em Saúde à População Privada de Liberdade: desafios e caminhos</span>
           </li>
           <li class="schedule-item">
-            <span class="schedule-time">15:30 – 16:00</span>
-            <span class="schedule-activity">Coffee break</span>
-          </li>
-          <li class="schedule-item">
-            <span class="schedule-time">16:00 – 17:30</span>
-            <span class="schedule-activity">Apresentação de experiências – III Mostra Estadual</span>
+            <span class="schedule-time">15:00 – 16:30</span>
+            <span class="schedule-activity">Apresentação dos trabalhos</span>
           </li>
         </ul>
       </div>
@@ -101,47 +101,35 @@ get_header();
 
     <!-- 16/04 -->
     <div class="row align-items-start">
-      <div class="col-12 col-md-3 day-date-col">
+      <div class="col-12 col-lg-3 day-date-col">
         <p class="schedule-date-number">16/04</p>
         <p class="schedule-day-name">QUINTA-FEIRA</p>
       </div>
-      <div class="col-12 col-md-9">
+      <div class="col-12 col-lg-9">
         <ul class="schedule-list">
           <li class="schedule-item">
-            <span class="schedule-time">08:30 – 09:30</span>
-            <span class="schedule-activity">Mesa redonda: Integração entre saúde e segurança pública</span>
+            <span class="schedule-time">09:00 – 10:30</span>
+            <span class="schedule-activity">Mesa 03: Monitoramento, Avaliação e Qualidade do Cuidado na Atenção Primária à Saúde Prisional: indicadores, financiamento e gestão da informação</span>
           </li>
           <li class="schedule-item">
-            <span class="schedule-time">09:30 – 10:30</span>
-            <span class="schedule-activity">Conferência: Atenção à saúde mental no sistema prisional</span>
+            <span class="schedule-time">10:30 – 12:30</span>
+            <span class="schedule-activity">Mesa 04: Saúde Mental na Saúde Prisional: adoecimento, transtorno e sofrimento psíquico no contexto prisional.</span>
           </li>
           <li class="schedule-item">
-            <span class="schedule-time">10:30 – 11:00</span>
-            <span class="schedule-activity">Coffee break</span>
+            <span class="schedule-time">10:30 – 12:30</span>
+            <span class="schedule-activity">Oficinas: Promoção da saúde e humanização · Farmácia Viva · Atualização em Odontologia</span>
           </li>
           <li class="schedule-item">
-            <span class="schedule-time">11:00 – 12:00</span>
-            <span class="schedule-activity">Apresentação de trabalhos científicos aprovados</span>
-          </li>
-          <li class="schedule-item">
-            <span class="schedule-time">12:00 – 14:00</span>
+            <span class="schedule-time">12:30 – 13:30</span>
             <span class="schedule-activity">Almoço</span>
           </li>
           <li class="schedule-item">
-            <span class="schedule-time">14:00 – 15:30</span>
-            <span class="schedule-activity">Painel: Equidade e cuidado integral no SUS</span>
+            <span class="schedule-time">13:30 – 15:00</span>
+            <span class="schedule-activity">Mesa 05: Caminhos para a Integralidade do Cuidado em Saúde na Atenção Primária Prisional</span>
           </li>
           <li class="schedule-item">
-            <span class="schedule-time">15:30 – 16:00</span>
-            <span class="schedule-activity">Coffee break</span>
-          </li>
-          <li class="schedule-item">
-            <span class="schedule-time">16:00 – 17:00</span>
-            <span class="schedule-activity">Premiação e encerramento da III Mostra Estadual</span>
-          </li>
-          <li class="schedule-item">
-            <span class="schedule-time">17:00 – 17:30</span>
-            <span class="schedule-activity">Encerramento oficial</span>
+            <span class="schedule-time">15:00 – 16:30</span>
+            <span class="schedule-activity">Premiação dos trabalhos</span>
           </li>
         </ul>
       </div>
