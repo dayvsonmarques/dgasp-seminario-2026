@@ -93,6 +93,7 @@ function congresso_custom_enqueue_scripts() {
     wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css');
     wp_enqueue_style('congresso-custom-style', get_stylesheet_uri(), [], filemtime(get_template_directory() . '/style.css'));
     wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', [], null, true);
+    wp_enqueue_script('speakers', get_template_directory_uri() . '/assets/js/speakers.js', ['bootstrap'], filemtime(get_template_directory() . '/assets/js/speakers.js'), true);
 }
 add_action('wp_enqueue_scripts', 'congresso_custom_enqueue_scripts');
 

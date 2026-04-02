@@ -222,7 +222,7 @@ p {
 }
 
 .site-header--sticky .header-logo--main {
-  max-width: 18vw;
+  max-width: 16vw;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
@@ -1121,6 +1121,7 @@ body:has(.site-header--sticky) main {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  background-color: #fff;
 }
 
 .section-speakers .carousel-inner {
@@ -1129,6 +1130,7 @@ body:has(.site-header--sticky) main {
 
 .section-speakers .carousel-item {
   height: 100vh;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .speaker-slide {
@@ -1140,8 +1142,8 @@ body:has(.site-header--sticky) main {
   overflow: hidden;
 }
 
-.speaker-slide--odd  { background-color: #0068ff; }
-.speaker-slide--even { background-color: #223254; }
+.speaker-slide--even  { background-color: #0068ff; }
+.speaker-slide--odd { background-color: #223254; }
 
 .carousel-item--banner {
   height: auto;

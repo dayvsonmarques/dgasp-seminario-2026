@@ -20,7 +20,7 @@ $schedule_link2 = get_post_meta($home_id, '_home_schedule_link2', true) ?: '#';
                     <div class="col-lg-6">
                         <div class="card event-card h-100 p-4 text-center">
                             <h3 class="card-title pb-3">APRESENTAÇÕES ORAIS</h3>
-                            <a href="<?php echo esc_url($schedule_link2); ?>" class="btn-main">SAIBA MAIS</a>
+                            <a href="#palestrantes" class="btn-main js-scroll">SAIBA MAIS</a>
                         </div>
                     </div>
                 </div>

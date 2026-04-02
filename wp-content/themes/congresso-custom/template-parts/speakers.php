@@ -9,8 +9,8 @@ $speakers = new WP_Query([
 $has_speakers = $speakers->have_posts();
 ?>
 
-<section class="section-speakers">
-  <div id="speakersCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+<section class="section-speakers" id="palestrantes">
+  <div id="speakersCarousel" class="carousel slide carousel-fade" data-bs-ride="false">
     <div class="carousel-inner">
 
       <div class="carousel-item carousel-item--banner active">
@@ -86,25 +86,3 @@ $has_speakers = $speakers->have_posts();
 
   </div>
 </section>
-
-<script>
-(function () {
-  const el = document.getElementById('speakersCarousel');
-  if (!el) return;
-  let startX = 0;
-  el.addEventListener('mousedown',  e => { startX = e.clientX; });
-  el.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-  el.addEventListener('mouseup', e => {
-    const diff = startX - e.clientX;
-    if (Math.abs(diff) < 50) return;
-    const carousel = bootstrap.Carousel.getOrCreateInstance(el);
-    diff > 0 ? carousel.next() : carousel.prev();
-  });
-  el.addEventListener('touchend', e => {
-    const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) < 50) return;
-    const carousel = bootstrap.Carousel.getOrCreateInstance(el);
-    diff > 0 ? carousel.next() : carousel.prev();
-  });
-})();
-</script>

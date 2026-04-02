@@ -55,4 +55,19 @@
     const clickInsideMenu = menu.contains(e.target) || toggle.contains(e.target);
     if (!clickInsideMenu) closeMenu();
   });
+
+  // Smooth scroll for .js-scroll anchors
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a.js-scroll');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href || !href.startsWith('#')) return;
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    const stickyHeader = document.querySelector('.site-header--sticky');
+    const offset = stickyHeader ? stickyHeader.offsetHeight : 0;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
 })();
