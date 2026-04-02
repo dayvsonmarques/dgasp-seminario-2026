@@ -59,3 +59,6 @@ vendor/
 # Ignore IDE files
 .vscode/
 .idea/
+
+# Ignore shell scripts
+*.sh
