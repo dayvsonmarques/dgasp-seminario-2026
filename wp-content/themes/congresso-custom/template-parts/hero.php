@@ -5,13 +5,10 @@ if ( ! $sobre ) return;
 $thumbnail_id = get_post_thumbnail_id( $sobre->ID );
 ?>
 
-<?php if ( $thumbnail_id ) : ?>
-<div class="sobre-hero">
-  <?php echo wp_get_attachment_image( $thumbnail_id, 'full', false, [
-    'class' => 'sobre-hero-img',
-    'alt'   => esc_attr( get_the_title( $sobre->ID ) ),
-  ] ); ?>
-</div>
+<?php if ( $thumbnail_id ) :
+  $thumb_url = wp_get_attachment_image_url( $thumbnail_id, 'full' );
+?>
+<div class="sobre-hero" style="background-image: url('<?php echo esc_url( $thumb_url ); ?>')"></div>
 <?php endif; ?>
 
 <section class="section-welcome">

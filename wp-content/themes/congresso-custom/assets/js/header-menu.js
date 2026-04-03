@@ -6,10 +6,13 @@
     const headerBarBot = document.querySelector('.header-bar--bottom');
 
     if (siteHeader) {
-      const headerHeight = siteHeader.getBoundingClientRect().bottom;
+      const banner = document.querySelector('.banner-home');
+      const getStickyThreshold = () => banner
+        ? banner.getBoundingClientRect().bottom + window.scrollY
+        : siteHeader.getBoundingClientRect().bottom;
 
       const onScroll = () => {
-        if (window.scrollY >= headerHeight) {
+        if (window.scrollY >= getStickyThreshold()) {
           siteHeader.classList.add('site-header--sticky');
           if (headerBarTop) headerBarTop.classList.add('d-none');
           if (headerBarBot) headerBarBot.classList.add('d-none');

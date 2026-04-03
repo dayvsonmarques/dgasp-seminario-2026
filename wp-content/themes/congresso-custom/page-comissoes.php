@@ -33,11 +33,11 @@ get_header();
   <div class="container py-5">
     <div class="row align-items-start g-4 g-md-5 py-4 py-md-5">
 
-      <div class="col-12 col-lg-3">
+      <div class="col-12 col-lg-5">
         <h1 class="section-title committees-page-title color-blue mb-0">COMISSÕES</h1>
       </div>
 
-      <div class="col-12 col-lg-9">
+      <div class="col-12 col-lg-7">
         <?php foreach ( $committees as $group ) : ?>
         <div class="mb-5">
           <h2 class="committee-group-title fs-3 mb-3"><?php echo esc_html( $group['title'] ); ?></h2>
