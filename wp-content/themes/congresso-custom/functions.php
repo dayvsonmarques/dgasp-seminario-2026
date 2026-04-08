@@ -549,6 +549,14 @@ function congresso_home_add_meta_boxes() {
         'normal',
         'default'
     );
+    add_meta_box(
+        'congresso_home_approved',
+        __('Trabalhos Aprovados — PDF do Botão CONFIRA', 'congresso-custom'),
+        'congresso_home_approved_meta_box',
+        $screen_id,
+        'normal',
+        'default'
+    );
 }
 add_action('add_meta_boxes', 'congresso_home_add_meta_boxes');
 
@@ -689,6 +697,38 @@ function congresso_home_participation_meta_box($post) {
     <?php
 }
 
+/** Approved PDF Meta Box */
+function congresso_home_approved_meta_box($post) {
+    if (!congresso_home_is_home_page()) {
+        echo '<p><em>' . __('Estes campos são exclusivos para a página Home.', 'congresso-custom') . '</em></p>';
+        return;
+    }
+    $pdf_id  = (int) get_post_meta($post->ID, '_home_approved_pdf_id', true);
+    $pdf_url = $pdf_id ? wp_get_attachment_url($pdf_id) : '';
+    ?>
+    <table class="form-table">
+        <tr>
+            <th><label><?php _e('PDF — Trabalhos Aprovados', 'congresso-custom'); ?></label></th>
+            <td>
+                <input type="hidden" id="home_approved_pdf_id" name="_home_approved_pdf_id" value="<?php echo esc_attr($pdf_id); ?>" />
+                <div id="home_approved_pdf_preview">
+                    <?php if ($pdf_url): ?>
+                        <a href="<?php echo esc_url($pdf_url); ?>" target="_blank"><?php _e('PDF atual', 'congresso-custom'); ?></a>
+                    <?php else: ?>
+                        <?php _e('Nenhum PDF selecionado', 'congresso-custom'); ?>
+                    <?php endif; ?>
+                </div>
+                <p>
+                    <button type="button" class="button" id="home_approved_pdf_select"><?php _e('Selecionar PDF', 'congresso-custom'); ?></button>
+                    <button type="button" class="button" id="home_approved_pdf_remove"><?php _e('Remover', 'congresso-custom'); ?></button>
+                </p>
+                <p class="description"><?php _e('Este PDF será aberto ao clicar no botão "CONFIRA" da seção Trabalhos Aprovados.', 'congresso-custom'); ?></p>
+            </td>
+        </tr>
+    </table>
+    <?php
+}
+
 /** Save Home Meta Fields */
 function congresso_home_save_meta($post_id) {
     if (!isset($_POST['congresso_home_meta_nonce']) || !wp_verify_nonce($_POST['congresso_home_meta_nonce'], 'congresso_home_meta_save')) return;
@@ -737,6 +777,11 @@ function congresso_home_save_meta($post_id) {
     if (isset($_POST['_home_participation_btn_link'])) {
         update_post_meta($post_id, '_home_participation_btn_link', esc_url_raw($_POST['_home_participation_btn_link']));
     }
+
+    // Approved PDF
+    if (isset($_POST['_home_approved_pdf_id'])) {
+        update_post_meta($post_id, '_home_approved_pdf_id', (int) $_POST['_home_approved_pdf_id']);
+    }
 }
 add_action('save_post', 'congresso_home_save_meta');
 
@@ -770,6 +815,24 @@ function congresso_home_admin_scripts($hook) {
             }
             setupMediaPicker('#home_banner_select','#home_banner_remove','#home_banner_image','#home_banner_preview',true);
             setupMediaPicker('#home_banner_mobile_select','#home_banner_mobile_remove','#home_banner_image_mobile','#home_banner_mobile_preview',true);
+
+            // PDF — Trabalhos Aprovados
+            var approvedFrame;
+            $('#home_approved_pdf_select').on('click', function(e){
+                e.preventDefault();
+                if(approvedFrame){ approvedFrame.open(); return; }
+                approvedFrame = wp.media({ title: 'Selecionar PDF', button: { text: 'Usar este PDF' }, library: { type: 'application/pdf' }, multiple: false });
+                approvedFrame.on('select', function(){
+                    var att = approvedFrame.state().get('selection').first().toJSON();
+                    $('#home_approved_pdf_id').val(att.id);
+                    $('#home_approved_pdf_preview').html('<a target=\"_blank\" href=\"'+att.url+'\">PDF atual</a>');
+                });
+                approvedFrame.open();
+            });
+            $('#home_approved_pdf_remove').on('click', function(){
+                $('#home_approved_pdf_id').val('');
+                $('#home_approved_pdf_preview').text('Nenhum PDF selecionado');
+            });
         });
     ");
 }

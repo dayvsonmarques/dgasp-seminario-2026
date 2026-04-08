@@ -6,6 +6,7 @@ get_header(); ?>
     <?php get_template_part('template-parts/hero'); ?>
     <?php get_template_part('template-parts/about'); ?>
     <?php get_template_part('template-parts/schedule'); ?>
+    <?php get_template_part('template-parts/approved'); ?>
     <?php get_template_part('template-parts/speakers'); ?>
     <?php get_template_part('template-parts/participation'); ?>
 </main>
