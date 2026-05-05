@@ -74,7 +74,7 @@ p {
 
 .section-title {
   font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 7rem;
+  font-size: 2.5rem;
   color: #ffffff;
   line-height: 1.1em;
   letter-spacing: 0.02em;
@@ -84,6 +84,16 @@ p {
 .section-title span {
   font-weight: 400;
   display: inline;
+}
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .section-title {
+    font-size: 6rem;
+  }
 }
 
 .event-card {
@@ -108,7 +118,7 @@ p {
 
 .title-section {
   font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 5em;
+  font-size: 2.5rem;
   color: #000000;
   line-height: 1.1em;
   letter-spacing: 0.02em;
@@ -120,11 +130,31 @@ p {
   font-weight: 400;
   display: inline;
 }
+@media (min-width: 768px) {
+  .title-section {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .title-section {
+    font-size: 5rem;
+  }
+}
 
 .page-title {
   font-weight: 300;
-  font-size: 6em;
+  font-size: 2.5rem;
   font-family: "Bebas Neue", Arial, sans-serif;
+}
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .page-title {
+    font-size: 6rem;
+  }
 }
 
 .btn-main, .btn-default-custom {
@@ -754,14 +784,6 @@ body:has(.site-header--sticky) main {
   position: relative;
   padding: 10em 0;
 }
-.section-schedule .section-title {
-  font-size: 2.5rem;
-}
-@media (min-width: 992px) {
-  .section-schedule .section-title {
-    font-size: 6rem;
-  }
-}
 .section-schedule .container,
 .section-schedule .container-fluid {
   display: flex;
@@ -914,6 +936,7 @@ body:has(.site-header--sticky) main {
   margin-bottom: 3rem;
 }
 .section-about-content .about-subtitle {
+  font-size: 2.5rem;
   line-height: 1.4;
   margin-bottom: 1.5rem;
   color: #223254;
@@ -922,14 +945,9 @@ body:has(.site-header--sticky) main {
 .section-about-content .about-subtitle .highlight-text {
   color: #0068ff;
 }
-@media (min-width: 0) {
+@media (min-width: 768px) {
   .section-about-content .about-subtitle {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 0) {
-  .section-about-content .about-subtitle {
-    font-size: 5rem;
+    font-size: 3.5rem;
     line-height: 1.2;
   }
 }
@@ -1147,11 +1165,6 @@ body:has(.site-header--sticky) main {
 }
 
 @media (max-width: 767px) {
-  .section-welcome .section-title,
-  .section-full-schedule .section-title {
-    font-size: 4rem;
-  }
-
   .schedule-date-number { font-size: 5rem; }
   .schedule-day-name    { font-size: 1.8rem; }
 }
